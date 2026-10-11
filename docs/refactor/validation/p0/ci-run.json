@@ -1,0 +1,136 @@
+{
+  "verified_success": true,
+  "repository": "LingYzh/ag-local",
+  "workflow": ".github/workflows/p0-validation.yml",
+  "run_id": 38146368259,
+  "run_url": "https://github.com/LingYzh/ag-local/actions/runs/38146368259",
+  "run_attempt": 1,
+  "event": "push",
+  "head_sha": "0129d88fa6143db123628aa68cf395d26b2332e7",
+  "source_tree_sha": "7ac370b4c70c37b76a54db9db823a0d963da0231",
+  "created_at": "2026-10-11T14:14:22Z",
+  "updated_at": "2026-10-11T14:17:33Z",
+  "jobs": [
+    {
+      "id": 114490471196,
+      "name": "synthetic-validation",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 38146368259,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Check tool versions",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Install locked desktop dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Type check",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Synthetic desktop tests",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7
+        },
+        {
+          "name": "Create independent Python environment",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8
+        },
+        {
+          "name": "Synthetic Python suites and source provenance",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9
+        },
+        {
+          "name": "Archive synthetic test evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10
+        },
+        {
+          "name": "Post Run actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19
+        },
+        {
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 20
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 21
+        }
+      ]
+    }
+  ],
+  "artifacts": [
+    {
+      "id": 11705091930,
+      "name": "p0-synthetic-0129d88fa6143db123628aa68cf395d26b2332e7",
+      "size_in_bytes": 13219,
+      "digest": "sha256:ec325775b47c737b632db3e13bb774c155199291bc140e91403708ccc20c3401",
+      "created_at": "2026-10-11T14:17:26Z",
+      "expires_at": "2026-10-25T14:17:25Z"
+    }
+  ],
+  "artifact_download_sha256_verified": true,
+  "source_hashes_compared_with_local_checkout": 86,
+  "tests": {
+    "desktop": {
+      "run": 55,
+      "passed": 55,
+      "failed": 0,
+      "skipped": 0
+    },
+    "python": {
+      "run": 112,
+      "passed": 112,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "reports": [
+    "ci-desktop-tests.json",
+    "ci-python-tests.json",
+    "ci-python-environment.json"
+  ],
+  "scope": "Synthetic desktop and Python suites in a clean Windows runner. No real client, private PCAP, Electron smoke or hall run in CI. Report copies are retained in the repository independently of artifact expiry."
+}

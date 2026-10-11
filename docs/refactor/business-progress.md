@@ -4,7 +4,7 @@
 
 重构工程已整体迁入 `D:\ag-local`，原 Alpha-Persei-Cluster 的 `codex/refactor` 工作区恢复到分支创建时的 `83c03f1`。代码、计划、候选 schema 与本地 QA 材料已保留；迁移核验见 [目录迁移说明](directory-migration.md)。下文既有记录中的采样时间及来源路径保持历史含义。
 
-对 `7aea8f0` 的独立复核已形成 [5.3.1 大厅推进计划](../plan/AG-Local_531_Hall_Execution_Plan_v1.0.md)。本轮已修复 TS 监督器迟到退出清掉故障的问题，建立独立且锁定的 Python 工具环境，并将离线匹配工具与合成测试迁入源码。实际结果、源码绑定和 CI 状态统一记录于 [P0 验证记录](p0-validation.md)。G0 / G1 仍未通过。
+对 `7aea8f0` 的独立复核已形成 [5.3.1 大厅推进计划](../plan/AG-Local_531_Hall_Execution_Plan_v1.0.md)。P0 H01—H03 已完成本地及远端验收：修复 TS 监督器迟到退出清掉故障的问题，建立独立且锁定的 Python 工具环境，将离线匹配工具与合成测试迁入源码，并核验实际 CI 成功。结果、源码绑定和 CI 记录统一见 [P0 验证记录](p0-validation.md)。G0 / G1 仍未通过。
 
 ## 当前路线与结论
 

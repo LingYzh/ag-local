@@ -2,6 +2,8 @@
 
 执行日期：2026-10-11（UTC+8）。审查及回归基线：`7aea8f08f82b2853156ced43db9831f561e0caf0`。本轮仅实施 [大厅推进计划](../plan/AG-Local_531_Hall_Execution_Plan_v1.0.md) 的 H01、H02、H03；G0 / G1 仍未通过。
 
+**P0 H01—H03 已完成验收并提交推送。** 初次交付为 `e7f7077`，CI 路径断言修正为 `0129d88`；[该修正提交的实际 GitHub Actions](https://github.com/LingYzh/ag-local/actions/runs/38146368259) 全部通过。后续记录提交只补充验证材料，不扩大业务范围。
+
 ## H01：实例故障保持
 
 TS 监督器现在保存实例首次故障。关闭已确认但退出超时后，迟到的退出事件仅释放该实例所有权，保留 `FAILED / WORKER_EXIT_TIMEOUT`；重复关闭仍返回原故障。显式启动新实例后才重置状态，旧回调不能覆盖新实例。原有及时确认并正常退出仍得到 STOPPED，未增加按 PID、进程名或端口结束进程的路径。
@@ -62,7 +64,17 @@ CLI 要求显式输入、schema、双方预期 SHA-256 和新输出目录，拒�
 
 [P0 工作流](../../.github/workflows/p0-validation.yml) 在 Windows runner 上检查 Node / npm 版本、安装锁定桌面依赖、运行类型检查和 Vitest，然后调用与本地相同的 Python 环境脚本，运行全部合成 Python 套件。官方 Actions 固定到完整提交 SHA。测试与环境报告作为运行附件保存 14 天。
 
-真实客户端、私人 PCAP 和本地桌面 smoke 不进入公共 CI。[首次实际运行](validation/p0/ci-initial-failure.json) 在既有客户端识别测试中失败：runner 的 TEMP 使用 Windows 短路径，生产代码返回正确的真实路径，测试以 `path.resolve` 比较导致误判。已将断言改为文件系统 `realpath` 并完成本地全套桌面复跑；Python 步骤在该次 CI 中未执行，不计为通过。后续远端运行尚待核验，工作流文件存在不算 CI 通过。
+真实客户端、私人 PCAP 和本地桌面 smoke 不进入公共 CI。[首次实际运行](validation/p0/ci-initial-failure.json) 在既有客户端识别测试中失败：runner 的 TEMP 使用 Windows 短路径，生产代码返回正确的真实路径，测试以 `path.resolve` 比较导致误判。已将断言改为文件系统 `realpath` 并完成本地全套桌面复跑；Python 步骤在该次 CI 中未执行，不计为通过。
+
+修正提交 `0129d88fa6143db123628aa68cf395d26b2332e7` 的 [第二次实际 CI](https://github.com/LingYzh/ag-local/actions/runs/38146368259) 全部通过，步骤状态和制品摘要保存于 [ci-run.json](validation/p0/ci-run.json)。下载附件后核对 ZIP SHA-256，并逐项核对 86 项源码 / 构建输入哈希与本地提交一致。该 runner 能创建测试 symlink，因此两套测试没有跳过项。
+
+| 远端验收 | 持久化结果 |
+| --- | --- |
+| 桌面类型检查及 Vitest | [55 项全部通过](validation/p0/ci-desktop-tests.json)，从原始报告提取测试名称和状态 |
+| 独立 Python 环境 | [官方发行与依赖锁核验通过](validation/p0/ci-python-environment.json)，实际使用 Windows PowerShell 5.1 安装 |
+| 全部合成 Python 套件 | [112 项全部通过](validation/p0/ci-python-tests.json)，工作区干净、执行前后源码不变 |
+
+远端附件摘要为 `ec325775b47c737b632db3e13bb774c155199291bc140e91403708ccc20c3401`，保留至 2026-10-25。上述白名单报告另保存在仓库，附件到期不会删除已提交的验收记录；未发布原始 job 日志或含绝对 runner 路径的原始 Vitest JSON。
 
 ## 验收边界与下一步
 

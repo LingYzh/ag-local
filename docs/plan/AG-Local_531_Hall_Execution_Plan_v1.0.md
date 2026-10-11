@@ -366,6 +366,6 @@ G0 的含义沿用原计划：锁定并保全当前候选输入，使静态分�
 | H01 | 已完成本地验收 | TS 实例首次故障保持；新增测试在基线失败、修复后通过；完整桌面回归见 [P0 记录](../refactor/p0-validation.md) |
 | H02 | 已完成本地验收 | 官方独立运行时、带 wheel 哈希的依赖锁、PowerShell 5.1 验证、wheelhouse 正向及损坏拒绝、两次静态提取一致 |
 | H03A | 已完成本地验收 | 受跟踪的离线工具和合成测试；独立 checkout 的 Python 112 项运行、111 通过、1 跳过；真实抓包去重 238 帧可信匹配；19 项 source / package smoke 及源码 / ASAR 绑定 |
-| H03B | 等待提交后远端运行 | 最小 Windows CI 已加入；只有取得真实成功运行记录才标记完成 |
+| H03B | 已完成远端验收 | [0129d88 的实际 CI](https://github.com/LingYzh/ag-local/actions/runs/38146368259) 全部通过：类型检查、Vitest 55 项、独立 Python 环境和 Python 112 项；附件摘要与源码绑定已核验并持久化 |
 
 本轮范围止于 P0，未展开 H04—H08。阶段化准入和监听前实际制品校验继续适用；P0 通过不改变 G0 / G1 或 `businessReady=false`。
