@@ -1,0 +1,126 @@
+{
+  "schema_sha256": "b9101c965ed4f75317aa9c0199e17e5a7d2c3e0c0e23b982217a960b1a6ee79f",
+  "messages": 3062,
+  "fields": 6892,
+  "structure_errors": [],
+  "message_references": 1368,
+  "effective_codec_changes": [
+    {
+      "name": "cs_50006",
+      "kind": "setdefault_insert"
+    },
+    {
+      "name": "sc_50007",
+      "kind": "setdefault_insert"
+    },
+    {
+      "name": "cs_50016",
+      "kind": "setdefault_insert"
+    },
+    {
+      "name": "sc_50017",
+      "kind": "setdefault_insert"
+    },
+    {
+      "name": "p49_chess_map_net_rec",
+      "kind": "overwrite"
+    },
+    {
+      "name": "crickets_action_net_rec",
+      "kind": "overwrite"
+    },
+    {
+      "name": "crickets_round_net_rec",
+      "kind": "overwrite"
+    },
+    {
+      "name": "explore_event_net_rec",
+      "kind": "overwrite"
+    },
+    {
+      "name": "explore_mimir_skill_net_rec",
+      "kind": "overwrite"
+    },
+    {
+      "name": "explore_mimir_net_rec",
+      "kind": "overwrite"
+    },
+    {
+      "name": "explore_state_net_rec",
+      "kind": "overwrite"
+    },
+    {
+      "name": "sc_67001",
+      "kind": "overwrite"
+    }
+  ],
+  "unresolved_after_codec_patches": [],
+  "missing_server_literal_names": [
+    "sc_45109",
+    "sc_45111"
+  ],
+  "login_descriptor_comparison": [
+    {
+      "message": "cs_10038",
+      "expected_fields": 7,
+      "actual_fields": 7,
+      "differences": []
+    },
+    {
+      "message": "sc_10039",
+      "expected_fields": 12,
+      "actual_fields": 12,
+      "differences": []
+    },
+    {
+      "message": "cs_10042",
+      "expected_fields": 43,
+      "actual_fields": 43,
+      "differences": []
+    },
+    {
+      "message": "sc_10043",
+      "expected_fields": 5,
+      "actual_fields": 5,
+      "differences": []
+    },
+    {
+      "message": "cs_10050",
+      "expected_fields": 1,
+      "actual_fields": 1,
+      "differences": []
+    },
+    {
+      "message": "sc_10051",
+      "expected_fields": 3,
+      "actual_fields": 3,
+      "differences": []
+    },
+    {
+      "message": "sc_10201",
+      "expected_fields": 3,
+      "actual_fields": 3,
+      "differences": []
+    }
+  ],
+  "source_definitions": 3061,
+  "compatibility_aliases": [
+    {
+      "name": "crickets_round_score_net_rec",
+      "target": "p58_pb.crickets_round_score_net_rec",
+      "reason": "Alpha codec.py94-105 patched dance round uses bare score ref"
+    }
+  ],
+  "verification_method": "Standalone JSON checks and AST inspection of constant schema assignments; no Alpha module imported or executed.",
+  "runtime_test_performed": false,
+  "missing_server_literal_context": {
+    "scope": "Optional boss-team gameplay handlers, operations.py6172-6207",
+    "request_names_also_absent_from_uploaded_client": [
+      "cs_45108",
+      "cs_45110"
+    ],
+    "existing_server_fallback": "codec_encode(...) or b\"\\x08\\x00\"",
+    "handling": "Source descriptors preserved faithfully; no guessed definitions added. This is not an extraction loss.",
+    "source": "https://github.com/Mint-ARK/Alpha-Persei-Cluster/blob/83c03f1d75004ecb9f0ac1484676f6b5181dfa4e/v5_server/operations.py#L6172-L6207"
+  }
+}

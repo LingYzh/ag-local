@@ -1,0 +1,10 @@
+{
+    "at": "2026-10-11T08:57:35.476Z",
+    "directory": "D:\\Alpha-Persei-Cluster\\desktop\\out\\portable-X5qp57\\Alpha Persei-win32-x64",
+    "executable": "D:\\Alpha-Persei-Cluster\\desktop\\out\\portable-X5qp57\\Alpha Persei-win32-x64\\AlphaPersei.exe",
+    "version": "0.1.0",
+    "electron": "44.7.0",
+    "platform": "win32",
+    "architecture": "x64",
+    "asarSha256": "9f434bfeaac5eb0189dea024dd5d68e8a31e857c186ce1533fb9262e7bbbc804"
+}

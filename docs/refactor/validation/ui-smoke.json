@@ -1,0 +1,24 @@
+{
+    "at": "2026-10-11T08:49:33.566Z",
+    "results": [
+        {
+            "width": 1280,
+            "overflow": false
+        },
+        {
+            "width": 960,
+            "overflow": false
+        },
+        {
+            "width": 390,
+            "overflow": false
+        }
+    ],
+    "errors": [],
+    "interactions": [
+        "theme",
+        "v-model input",
+        "tabs",
+        "keyboard focus"
+    ]
+}

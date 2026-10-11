@@ -1,0 +1,48 @@
+{
+    "name": "alpha-persei-desktop",
+    "productName": "Alpha Persei",
+    "version": "0.1.0",
+    "description": "Vue 3, Electron and TypeScript refactor foundation",
+    "private": true,
+    "type": "module",
+    "main": "dist/main/main.cjs",
+    "engines": {
+        "node": ">=24.19.0 <25"
+    },
+    "packageManager": "npm@11.17.0",
+    "scripts": {
+        "dev:ui": "vite --host 127.0.0.1",
+        "check:ui": "vue-tsc --noEmit -p tsconfig.renderer.json",
+        "build:ui": "vite build",
+        "preview:ui": "vite preview --host 127.0.0.1",
+        "smoke:ui": "node scripts/ui-smoke.mjs",
+        "runtime:install": "node node_modules/electron/install.js",
+        "check": "npm run check:ui && tsc --noEmit -p tsconfig.node.json",
+        "test": "vitest run",
+        "build": "npm run check && npm run build:ui && node scripts/build.mjs",
+        "dev": "npm run build && node scripts/launch.mjs",
+        "smoke": "npm run build && node scripts/launch.mjs --smoke",
+        "package": "npm run build && node scripts/package.mjs",
+        "smoke:package": "node scripts/launch.mjs --smoke --packaged",
+        "inventory:client": "node scripts/inventory-client.mjs",
+        "preflight:python": "node scripts/compatibility-check.mjs",
+        "smoke:python": "node scripts/python-smoke.mjs"
+    },
+    "dependencies": {
+        "vue": "3.5.43",
+        "vuetify": "4.2.4"
+    },
+    "devDependencies": {
+        "@electron/packager": "20.3.0",
+        "@types/node": "24.10.1",
+        "@vitejs/plugin-vue": "6.0.10",
+        "electron": "44.7.0",
+        "esbuild": "0.28.2",
+        "playwright": "1.64.0",
+        "typescript": "5.9.3",
+        "vite": "8.3.4",
+        "vite-plugin-vuetify": "2.1.3",
+        "vitest": "5.0.3",
+        "vue-tsc": "3.3.13"
+    }
+}

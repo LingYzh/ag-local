@@ -1,0 +1,1197 @@
+{
+  "bundle_md5": "86add1e9d150efa2464ec96f0579a0b9",
+  "protocol_files": 92,
+  "messages": 3061,
+  "fields": 6889,
+  "unresolved_references": 0,
+  "unique_original_names": 2990,
+  "duplicate_original_name_groups": 53,
+  "duplicate_output_names": 0,
+  "qualified_names": [
+    "hero_hrl_pb.hero_exclusive_skill_net_rec",
+    "item_hrl_pb.item_net_rec",
+    "p11_pb.heart_demon_activity_info_rec",
+    "p11_pb.heart_demon_challenge_info",
+    "p13_pb.enchant_effect_net_rec",
+    "p13_pb.enchant_slot_net_rec",
+    "p13_pb.enchant_slot_preview_net_rec",
+    "p13_pb.equip_list",
+    "p14_pb.assignment_info",
+    "p14_pb.equip_list",
+    "p14_pb.hero_net_rec",
+    "p14_pb.player_net_rec",
+    "p17_pb.enchant_effect_net_rec",
+    "p17_pb.enchant_slot_net_rec",
+    "p17_pb.enchant_slot_preview_net_rec",
+    "p17_pb.use_item",
+    "p24_pb.star",
+    "p26_pb.matrix_artifact_net_rec",
+    "p26_pb.matrix_attribute_net_rec",
+    "p26_pb.matrix_event_net_rec",
+    "p26_pb.matrix_game_end_net_rec",
+    "p26_pb.matrix_hero_net_rec",
+    "p26_pb.matrix_phase_net_rec",
+    "p26_pb.matrix_reward_net_rec",
+    "p26_pb.matrix_stackable_item_net_rec",
+    "p28_pb.assignment_info",
+    "p29_pb.matrix_artifact_net_rec",
+    "p29_pb.matrix_attribute_net_rec",
+    "p29_pb.matrix_event_net_rec",
+    "p29_pb.matrix_game_end_net_rec",
+    "p29_pb.matrix_hero_net_rec",
+    "p29_pb.matrix_phase_net_rec",
+    "p29_pb.matrix_reward_net_rec",
+    "p29_pb.matrix_stackable_item_net_rec",
+    "p32_pb.enchant_effect_net_rec",
+    "p32_pb.enchant_slot_net_rec",
+    "p32_pb.equip_net_rec",
+    "p32_pb.hero_info_net_rec",
+    "p34_pb.use_item",
+    "p38_pb.log_net_rec",
+    "p39_pb.crickets_action_net_rec",
+    "p39_pb.crickets_round_net_rec",
+    "p39_pb.crickets_round_score_net_rec",
+    "p39_pb.dorm_pos_net_rec",
+    "p39_pb.exhibition_brief_net_rec",
+    "p39_pb.furniture_pos_net_rec",
+    "p39_pb.oper_net_rec",
+    "p44_pb.team_info_net_rec",
+    "p48_pb.enchant_effect_net_rec",
+    "p48_pb.enchant_slot_net_rec",
+    "p48_pb.hero_exclusive_skill_net_rec",
+    "p48_pb.item_net_rec",
+    "p48_pb.matrix_artifact_net_rec",
+    "p48_pb.matrix_attribute_net_rec",
+    "p48_pb.matrix_event_net_rec",
+    "p48_pb.matrix_game_end_net_rec",
+    "p48_pb.matrix_hero_net_rec",
+    "p48_pb.matrix_phase_net_rec",
+    "p48_pb.matrix_reward_net_rec",
+    "p49_pb.chess_map_net_rec",
+    "p49_pb.log_net_rec",
+    "p49_pb.position",
+    "p49_pb.teams_net_rec",
+    "p54_pb.enchant_effect_net_rec",
+    "p54_pb.enchant_slot_net_rec",
+    "p54_pb.player_net_rec",
+    "p54_pb.star",
+    "p58_pb.crickets_action_net_rec",
+    "p58_pb.crickets_round_net_rec",
+    "p58_pb.crickets_round_score_net_rec",
+    "p58_pb.dorm_pos_net_rec",
+    "p58_pb.exhibition_brief_net_rec",
+    "p58_pb.furniture_pos_net_rec",
+    "p58_pb.oper_net_rec",
+    "p60_pb.puzzle_info",
+    "p62_pb.bp_assignment_net_rec",
+    "p62_pb.bp_submit_net_rec",
+    "p62_pb.reward_net_rec",
+    "p63_pb.teams_net_rec",
+    "p64_pb.heart_demon_activity_info_rec",
+    "p64_pb.heart_demon_challenge_info",
+    "p65_pb.mission_info_net_rec",
+    "p65_pb.puzzle_info",
+    "p65_pb.schedule_info",
+    "p65_pb.stage_info",
+    "p67_pb.reward_net_rec",
+    "p72_pb.team_info_net_rec",
+    "p75_pb.heart_demon_challenge_info",
+    "p76_pb.mission_info_net_rec",
+    "p77_pb.activity_point_net_rec",
+    "p77_pb.battle_end_info_net_rec",
+    "p78_pb.activity_point_net_rec",
+    "p78_pb.battle_end_info_net_rec",
+    "p79_pb.mission_info_net_rec",
+    "p79_pb.point_stage_rec",
+    "p80_pb.chess_map_net_rec",
+    "p80_pb.four_dimensional_array",
+    "p80_pb.position",
+    "p80_pb.three_dimensional_array",
+    "p80_pb.two_dimensional_array",
+    "p80_pb.value_net_rec",
+    "p83_pb.bp_assignment_net_rec",
+    "p83_pb.bp_submit_net_rec",
+    "p83_pb.point_stage_rec",
+    "p83_pb.schedule_info",
+    "p84_pb.team_info_net_rec",
+    "p85_pb.chess_map_net_rec",
+    "p85_pb.four_dimensional_array",
+    "p85_pb.position",
+    "p85_pb.three_dimensional_array",
+    "p85_pb.two_dimensional_array",
+    "p85_pb.value_net_rec",
+    "p86_pb.stage_info",
+    "p89_pb.battle_record",
+    "p89_pb.export_auto_chessboard",
+    "p89_pb.export_buff",
+    "p89_pb.export_chess",
+    "p90_pb.battle_record",
+    "p90_pb.export_auto_chessboard",
+    "p90_pb.export_buff",
+    "p90_pb.export_chess",
+    "team_hrl_pb.equip_net_rec",
+    "team_hrl_pb.hero_info_net_rec",
+    "team_hrl_pb.hero_net_rec"
+  ],
+  "types": {
+    "uint32": 4893,
+    "string": 159,
+    "bool": 100,
+    "message": 1368,
+    "uint64": 221,
+    "int32": 127,
+    "float": 10,
+    "sint32": 8,
+    "int64": 1,
+    "bytes": 1,
+    "double": 1
+  },
+  "labels": {
+    "required": 4817,
+    "repeated": 1608,
+    "optional": 464
+  },
+  "message_metadata_keys": {
+    "name": 3061,
+    "full_name": 3061,
+    "nested_types": 3061,
+    "enum_types": 3061,
+    "fields": 3061,
+    "is_extendable": 3061,
+    "extensions": 3061
+  },
+  "field_metadata_keys": {
+    "name": 6889,
+    "full_name": 6889,
+    "number": 6889,
+    "index": 6889,
+    "label": 6889,
+    "has_default_value": 6889,
+    "default_value": 6889,
+    "type": 6889,
+    "cpp_type": 6889,
+    "message_type": 1368
+  },
+  "source_modules": [
+    {
+      "module": "affix_hrl_pb",
+      "messages": 1,
+      "fields": 3,
+      "bytecode_sha256": "1fe1fa57f459af1c3c21f80b5a7d5d3e0f2fd2d21a4669c5b79905fa02e22df1"
+    },
+    {
+      "module": "auto_chess_hrl_pb",
+      "messages": 21,
+      "fields": 74,
+      "bytecode_sha256": "94490a291f00d97d947d7fae096ab5612448f1cd2b44568d28007eb1d5f16add"
+    },
+    {
+      "module": "ban_hrl_pb",
+      "messages": 1,
+      "fields": 3,
+      "bytecode_sha256": "0b167acebb6a37f36366c201340186134b710818faee41a3b83f4a338c14f5a6"
+    },
+    {
+      "module": "chapter_hrl_pb",
+      "messages": 1,
+      "fields": 3,
+      "bytecode_sha256": "03c20b8b67728625ae84d30342912218a9e814f888d90add742d23796e9d6ecb"
+    },
+    {
+      "module": "chat_hrl_pb",
+      "messages": 3,
+      "fields": 16,
+      "bytecode_sha256": "a0a6fa315651ee810200cf53d8e26c4254563b8227b1c9a5ec41b1c595528fbf"
+    },
+    {
+      "module": "club_hrl_pb",
+      "messages": 4,
+      "fields": 30,
+      "bytecode_sha256": "c47bf6cbf09b9bf081b9e5bc0b84c4ce40d0418d26eb8d41996d97f0daf915bd"
+    },
+    {
+      "module": "hero_hrl_pb",
+      "messages": 11,
+      "fields": 39,
+      "bytecode_sha256": "2e95c226df193dc2b7a82851854ce476fe236bcb6926a49b711a66506e855f2f"
+    },
+    {
+      "module": "item_hrl_pb",
+      "messages": 4,
+      "fields": 11,
+      "bytecode_sha256": "9aacd5ce502b46b3bd52fb76062958e7e1161fa9861f8482ceb37c2d184e4e40"
+    },
+    {
+      "module": "netproto_pb",
+      "messages": 2,
+      "fields": 5,
+      "bytecode_sha256": "f3fd669a05d40d6bbbf9712bf1156f674712b9a7decf2ba14891c8e2a94e5e26"
+    },
+    {
+      "module": "p10_pb",
+      "messages": 22,
+      "fields": 103,
+      "bytecode_sha256": "67a68e0e8b07105cc41367ce4cd722f78f12d0d8e09a512a5c94084dfd0a6f86"
+    },
+    {
+      "module": "p11_pb",
+      "messages": 88,
+      "fields": 183,
+      "bytecode_sha256": "1dab3bb4c2cfb75bf9dac8e9e0c2bcc4e85f7237b593ffbaa456bff686494848"
+    },
+    {
+      "module": "p12_pb",
+      "messages": 43,
+      "fields": 57,
+      "bytecode_sha256": "d0ac8d691c633bfb4dfa204bf02f56f4a719ec4c4fd1a7cce4dbf42da005648f"
+    },
+    {
+      "module": "p13_pb",
+      "messages": 53,
+      "fields": 103,
+      "bytecode_sha256": "6991e154d564c311550bc653b690c3d28feffdfbea03904c87846a57ddec0ce6"
+    },
+    {
+      "module": "p14_pb",
+      "messages": 83,
+      "fields": 153,
+      "bytecode_sha256": "4631a03f9a8961284ef96f3db430e7a7f31874e17b50dbcc033e6bfad3fbe2d7"
+    },
+    {
+      "module": "p15_pb",
+      "messages": 14,
+      "fields": 23,
+      "bytecode_sha256": "a63577c203940649febb784b2d2ac330ecd01faaa46e0e09e254951f93b4632b"
+    },
+    {
+      "module": "p16_pb",
+      "messages": 17,
+      "fields": 43,
+      "bytecode_sha256": "6aea41b452f5dee12f892627565917cdd1cbcc241110ebb2e8c33fd4eb69372d"
+    },
+    {
+      "module": "p17_pb",
+      "messages": 23,
+      "fields": 46,
+      "bytecode_sha256": "2ae08a1f89e80490a83dfec5373604a4fe431a47ed34503c6d9b8201f29a2354"
+    },
+    {
+      "module": "p18_pb",
+      "messages": 61,
+      "fields": 134,
+      "bytecode_sha256": "893269299f22e444ba7cf944b4e48012d26487629c3cb74bb4b7915fc137ac9c"
+    },
+    {
+      "module": "p19_pb",
+      "messages": 35,
+      "fields": 75,
+      "bytecode_sha256": "e1b3aa0e737be05ad210b40c687fccf8d86974051a97c2d9f825ca8a14a350ba"
+    },
+    {
+      "module": "p20_pb",
+      "messages": 23,
+      "fields": 70,
+      "bytecode_sha256": "cc09c8d5c08310208b2a87532582f3916fcb909cacfd76c4a43d2b093510898c"
+    },
+    {
+      "module": "p21_pb",
+      "messages": 4,
+      "fields": 5,
+      "bytecode_sha256": "74a6c720b4083c47b29665764faf27dd4b53e233e7d332fd20d3464651229791"
+    },
+    {
+      "module": "p22_pb",
+      "messages": 8,
+      "fields": 10,
+      "bytecode_sha256": "d608960cbb99e0ab3c0649d54215866fd24cd4c062b633e0cde2a360b7a87483"
+    },
+    {
+      "module": "p23_pb",
+      "messages": 4,
+      "fields": 12,
+      "bytecode_sha256": "98da299fece8d04f14e86d4b8e9b7cde0a3d3e22e36926e453146ce1c5cb319d"
+    },
+    {
+      "module": "p24_pb",
+      "messages": 49,
+      "fields": 87,
+      "bytecode_sha256": "876963c9c9705692884fd5cfe2359e19c6fa413afbf74ae42214b8eb99e8b517"
+    },
+    {
+      "module": "p25_pb",
+      "messages": 1,
+      "fields": 1,
+      "bytecode_sha256": "4517b600d7fb8af12c23bc538a12f6c60341b3bf3f3c893449e246072f9aa550"
+    },
+    {
+      "module": "p26_pb",
+      "messages": 23,
+      "fields": 66,
+      "bytecode_sha256": "a44ca8c2a17aaa07a81edb4a8afa3f0172b6fcd50e748a454666c0d8459118d4"
+    },
+    {
+      "module": "p27_pb",
+      "messages": 34,
+      "fields": 52,
+      "bytecode_sha256": "0e2cc0d98c249522be661a090879feee699b13b5703b7c9b7295e726e1044248"
+    },
+    {
+      "module": "p28_pb",
+      "messages": 33,
+      "fields": 58,
+      "bytecode_sha256": "4786c10d1e642a6767f5e2a61a575c642da6be9b6eaf7f2a390866c2a717f8d5"
+    },
+    {
+      "module": "p29_pb",
+      "messages": 25,
+      "fields": 70,
+      "bytecode_sha256": "df6cf7b9d01e3ec38f5e710b331232d32819f04a666c86beb267e744c0c8dbcd"
+    },
+    {
+      "module": "p30_pb",
+      "messages": 30,
+      "fields": 83,
+      "bytecode_sha256": "6fb89cc1a59bb6f268514b2e452d4cb4919359b24245736a196e00636d9d0e6e"
+    },
+    {
+      "module": "p31_pb",
+      "messages": 58,
+      "fields": 77,
+      "bytecode_sha256": "d382bc2ecdbbe1a755e2e4957debca12ff0223a99df0411feb667720e82e084f"
+    },
+    {
+      "module": "p32_pb",
+      "messages": 97,
+      "fields": 201,
+      "bytecode_sha256": "90b0a4f81981083a561d789abba33441131ed9f0a3411078062629e58611e7e7"
+    },
+    {
+      "module": "p33_pb",
+      "messages": 25,
+      "fields": 66,
+      "bytecode_sha256": "10b58df3cd52f1380bd854563d44b1a2d059211e3c51fa2b6c3e9b6eb68af4c5"
+    },
+    {
+      "module": "p34_pb",
+      "messages": 31,
+      "fields": 82,
+      "bytecode_sha256": "a726df16430c4f24bfc0c923a15e33a88e6448d7ca140e5f793d676a09163b83"
+    },
+    {
+      "module": "p35_pb",
+      "messages": 24,
+      "fields": 56,
+      "bytecode_sha256": "3953ea9fd3315c8dbda4a3453271c101b5adbe04845f6f7328ccc6aedea7e13f"
+    },
+    {
+      "module": "p36_pb",
+      "messages": 38,
+      "fields": 66,
+      "bytecode_sha256": "741b37057dccd7ee9831ffb5523a9b3a859cc8140c339e73a4c0d3628d8ab89e"
+    },
+    {
+      "module": "p37_pb",
+      "messages": 50,
+      "fields": 80,
+      "bytecode_sha256": "ef3d443f3aa29c45f706710319bf73ce7d5cfcc617caeb63450494564258637c"
+    },
+    {
+      "module": "p38_pb",
+      "messages": 4,
+      "fields": 6,
+      "bytecode_sha256": "270c72683951e75b4d69166b9a52daecd5381316d679a7998f66baa8838af7d2"
+    },
+    {
+      "module": "p39_pb",
+      "messages": 54,
+      "fields": 102,
+      "bytecode_sha256": "8f700fb71233cf2bc90cca49e2d6891e1a44d367f151b81f39a1e68fd6a5fdb3"
+    },
+    {
+      "module": "p40_pb",
+      "messages": 17,
+      "fields": 29,
+      "bytecode_sha256": "e85487ca9281d420ecd417d233ecbadf3f3e9693859babc3de2ad85f0420d410"
+    },
+    {
+      "module": "p41_pb",
+      "messages": 2,
+      "fields": 3,
+      "bytecode_sha256": "ed90acd00be64d6f58441e9fc59aac17b168a371aa16ffcb5a10aeeecb45dbd7"
+    },
+    {
+      "module": "p42_pb",
+      "messages": 4,
+      "fields": 6,
+      "bytecode_sha256": "ff82d7e3558525a95f92df1d7665fe97f8682cbbb703429703d322e014dd2a4f"
+    },
+    {
+      "module": "p43_pb",
+      "messages": 6,
+      "fields": 9,
+      "bytecode_sha256": "ebdfcfd8ee45ae11e6a29ddaf0745e121f58488959d89e8a96b95a775a25a1a0"
+    },
+    {
+      "module": "p44_pb",
+      "messages": 29,
+      "fields": 47,
+      "bytecode_sha256": "1eccdecbb99d5ee2c57e218fa1a679d79d5286466d040ac61cf3764b985f437b"
+    },
+    {
+      "module": "p45_pb",
+      "messages": 23,
+      "fields": 47,
+      "bytecode_sha256": "404b67a7a835eb14d43db5efd34ca4e8ca9fcff429b4f7151687f34a4c3567ed"
+    },
+    {
+      "module": "p46_pb",
+      "messages": 19,
+      "fields": 35,
+      "bytecode_sha256": "4c5fcbf1e24fca5459d67e1288c3af201af47215bf3fa7a5333b2473a42fb3c8"
+    },
+    {
+      "module": "p47_pb",
+      "messages": 3,
+      "fields": 4,
+      "bytecode_sha256": "08f455bacb54b7a38d0c4d442e51c6d83a63c1e350832ba572a74db66e0f7060"
+    },
+    {
+      "module": "p48_pb",
+      "messages": 44,
+      "fields": 113,
+      "bytecode_sha256": "1a817cd0473370a3b39734e730c3ab87793ce8f1e7568b934fd84e816b15d13c"
+    },
+    {
+      "module": "p49_pb",
+      "messages": 35,
+      "fields": 76,
+      "bytecode_sha256": "7a945fea590d2d52fd5703848e7835cc46b93e5f884926ebf32cbe3b86cc1e5f"
+    },
+    {
+      "module": "p50_pb",
+      "messages": 15,
+      "fields": 29,
+      "bytecode_sha256": "57685a583f829e3c56c82cb01fcfa5a50554096e59f472f5d5e98346596912db"
+    },
+    {
+      "module": "p51_pb",
+      "messages": 2,
+      "fields": 3,
+      "bytecode_sha256": "12a771c555ed57656049494e4b047f7b60bd5816e24b90640ba7826dff543d22"
+    },
+    {
+      "module": "p52_pb",
+      "messages": 25,
+      "fields": 47,
+      "bytecode_sha256": "dc1b1bd92f5407bda2495e0f3bba4de248c7a7644672d0a3e14e2cbb6e3029d1"
+    },
+    {
+      "module": "p53_pb",
+      "messages": 7,
+      "fields": 12,
+      "bytecode_sha256": "04f09dbada8eb2c95eb9b27ef964875743dde275fa5e2d7454261d58d3d4312c"
+    },
+    {
+      "module": "p54_pb",
+      "messages": 38,
+      "fields": 161,
+      "bytecode_sha256": "76b12bf10f332a7547d6bdd51321deb8183fc7180833c274d854b4dae28ea93e"
+    },
+    {
+      "module": "p55_pb",
+      "messages": 18,
+      "fields": 35,
+      "bytecode_sha256": "f2f0f3ef63378bcf267a54e38771bcc0c6b5372632966aaf7d8a947e9b9e7fad"
+    },
+    {
+      "module": "p56_pb",
+      "messages": 4,
+      "fields": 7,
+      "bytecode_sha256": "91eecb40b6424fba051bbc88b6bb6be604fe78bb6d709cf4db2a9f5d38bd13bf"
+    },
+    {
+      "module": "p57_pb",
+      "messages": 8,
+      "fields": 18,
+      "bytecode_sha256": "349dca41dc7526a3459c147fcf2418efb88035f06a862475f9e26c954b1b4e6e"
+    },
+    {
+      "module": "p58_pb",
+      "messages": 179,
+      "fields": 449,
+      "bytecode_sha256": "b94260e17da821003bfd4913d4f4679a596216d6f1222aba1847f6010934bbb7"
+    },
+    {
+      "module": "p59_pb",
+      "messages": 29,
+      "fields": 53,
+      "bytecode_sha256": "7ae089ea234494f7cfa0219136981bda1953224178ad92b805b61e488ccfab45"
+    },
+    {
+      "module": "p60_pb",
+      "messages": 64,
+      "fields": 137,
+      "bytecode_sha256": "5e95830cb2558ee283f8ee9c256321a5e04bfd00be6e472f5f887ccdba602232"
+    },
+    {
+      "module": "p61_pb",
+      "messages": 57,
+      "fields": 123,
+      "bytecode_sha256": "c8eec6f3cb9098c794a3c363c085229e66bc41ab34ca6596438ea794386ed6ab"
+    },
+    {
+      "module": "p62_pb",
+      "messages": 23,
+      "fields": 53,
+      "bytecode_sha256": "6bdd6b3a9b6f1bf9c74c011a265e2687efcf3964ff8103c3215742327af93851"
+    },
+    {
+      "module": "p63_pb",
+      "messages": 23,
+      "fields": 54,
+      "bytecode_sha256": "d4d7065f5b1e3f0e00ff89428681daa2e547c3341ed33a080125a75fb2b3a8b9"
+    },
+    {
+      "module": "p64_pb",
+      "messages": 57,
+      "fields": 133,
+      "bytecode_sha256": "b228bde9f54ee921a9067005b9f952e12ab4f9973427769166df884668e0d528"
+    },
+    {
+      "module": "p65_pb",
+      "messages": 83,
+      "fields": 194,
+      "bytecode_sha256": "a3bdf5d8d29835d3cdad4a52940d626c2c28c3d47188069d7835813f78827c7b"
+    },
+    {
+      "module": "p66_pb",
+      "messages": 12,
+      "fields": 14,
+      "bytecode_sha256": "3fb744bb8c787e604540eb01a9aecaacfdc5f84e063f856aaa71adaf5c51bcbe"
+    },
+    {
+      "module": "p67_pb",
+      "messages": 18,
+      "fields": 38,
+      "bytecode_sha256": "3595559922affd8e50975feb64a6f214d622ccae0a63e353af14dfa8f5cfde80"
+    },
+    {
+      "module": "p68_pb",
+      "messages": 98,
+      "fields": 209,
+      "bytecode_sha256": "15de18122a1d2d3f0239b25154d584645fb91a2d85dde5dcc07d7ee42485d188"
+    },
+    {
+      "module": "p69_pb",
+      "messages": 9,
+      "fields": 30,
+      "bytecode_sha256": "8a3a256c02e3882c7f13366e80c7e092f4d756fddc8a8c214448acc958a11519"
+    },
+    {
+      "module": "p70_pb",
+      "messages": 36,
+      "fields": 70,
+      "bytecode_sha256": "fac15a14ca7e539cda0a228035f0fa8219e4275cf041ebb86106d26c1d6e8403"
+    },
+    {
+      "module": "p71_pb",
+      "messages": 10,
+      "fields": 16,
+      "bytecode_sha256": "3fdd44ccef989bc299a996617eddf75b1f8ae781544e0a515f9ce924fd9d2add"
+    },
+    {
+      "module": "p72_pb",
+      "messages": 50,
+      "fields": 115,
+      "bytecode_sha256": "69af8c059640cc0052fabd9b14c4f1fbd16752c5fcf15a6abedcfe478361c4e6"
+    },
+    {
+      "module": "p73_pb",
+      "messages": 22,
+      "fields": 32,
+      "bytecode_sha256": "082128e4a2108fa5165b817a874d5952da55ba203d9a1047506ce4ab9304bdba"
+    },
+    {
+      "module": "p75_pb",
+      "messages": 31,
+      "fields": 77,
+      "bytecode_sha256": "2d1c1b62e50f4e16ee076241fb268f45daec0fb37ca3041f9deb835ad4972987"
+    },
+    {
+      "module": "p76_pb",
+      "messages": 47,
+      "fields": 127,
+      "bytecode_sha256": "ddc25c4340603358f3ca2735ca462e843b54cf3433fa0f1ebc70abb123a90542"
+    },
+    {
+      "module": "p77_pb",
+      "messages": 33,
+      "fields": 68,
+      "bytecode_sha256": "c991472f17cbea67a35beff1bb17ffb0e3938b35b958a5c1a797e309a9b340da"
+    },
+    {
+      "module": "p78_pb",
+      "messages": 19,
+      "fields": 49,
+      "bytecode_sha256": "cc5f1b6226e5d010fb9526a269952c8a7488b15170b504c4c704cff4dc83226c"
+    },
+    {
+      "module": "p79_pb",
+      "messages": 58,
+      "fields": 158,
+      "bytecode_sha256": "45ddb761ee21fd658bb621b17657487cc93d490c1fcfa4332cac2b8b6543dbd7"
+    },
+    {
+      "module": "p80_pb",
+      "messages": 43,
+      "fields": 98,
+      "bytecode_sha256": "b01bcbeab573bc5470216b1ecc16fe18856394e7429c9030015ccf6d84697169"
+    },
+    {
+      "module": "p81_pb",
+      "messages": 3,
+      "fields": 7,
+      "bytecode_sha256": "70de3129f94e071f4a127ce714c662c2f3d4d8346f9b8b4cb247f1c41a3e3891"
+    },
+    {
+      "module": "p83_pb",
+      "messages": 106,
+      "fields": 263,
+      "bytecode_sha256": "d17c09990093e86acb22d436c76bce422cda21d2fa03a13fe37027c9ae946aca"
+    },
+    {
+      "module": "p84_pb",
+      "messages": 62,
+      "fields": 157,
+      "bytecode_sha256": "10dbdcb21fe32780450758ce4944fd731984d65d8e6d399c7a56bd4f460445b4"
+    },
+    {
+      "module": "p85_pb",
+      "messages": 55,
+      "fields": 110,
+      "bytecode_sha256": "4d12d119c95bcd13cadda7901e65e70411fe6833e339f11222a0423669ba1760"
+    },
+    {
+      "module": "p86_pb",
+      "messages": 39,
+      "fields": 87,
+      "bytecode_sha256": "30a7e7f93dbbf964bcc833dbdf2e95315bc9f26993e419d1bb1fcebbe5b7bde0"
+    },
+    {
+      "module": "p87_pb",
+      "messages": 12,
+      "fields": 25,
+      "bytecode_sha256": "b497bc82065e52a0a55a3ecb643e4122e5030bd76dd487efeba96a8c19374b5d"
+    },
+    {
+      "module": "p88_pb",
+      "messages": 67,
+      "fields": 149,
+      "bytecode_sha256": "257ca75a6cad9e5c2711ff079c82bf7bcbc577a7d16ed5fc03e9ec342a913b04"
+    },
+    {
+      "module": "p89_pb",
+      "messages": 200,
+      "fields": 506,
+      "bytecode_sha256": "b399d0c3f6d0e9c98cbb85b901432650a419057f010bcbbc7aebc0eddb81268a"
+    },
+    {
+      "module": "p90_pb",
+      "messages": 89,
+      "fields": 184,
+      "bytecode_sha256": "4782fbd044f4758e41925f2759db248df3be6d1e618309e1186e7498daa61952"
+    },
+    {
+      "module": "p91_pb",
+      "messages": 14,
+      "fields": 28,
+      "bytecode_sha256": "ddfbaba9e9a19278a62da9f87410eccea65800cd5ab92ae1fcc4a3e0c95be66a"
+    },
+    {
+      "module": "rank_hrl_pb",
+      "messages": 6,
+      "fields": 21,
+      "bytecode_sha256": "17ab59f5346516e2a3b859d7e30c8687f26df19862d059954f8e74951a933a09"
+    },
+    {
+      "module": "team_hrl_pb",
+      "messages": 5,
+      "fields": 17,
+      "bytecode_sha256": "eb18f6e11af5cb547fd8fd4791d4b8a4f685ff845dbc774212edacd2182c2b40"
+    },
+    {
+      "module": "user_hrl_pb",
+      "messages": 1,
+      "fields": 3,
+      "bytecode_sha256": "fdb9f85495af0e99a7cfc4ddf635b9b4b3fc83466cf18c655859593d0e69b33b"
+    }
+  ],
+  "bundle_sha256": "f1501ccee59271f6e47fe3eb945111dbef252985110b2d34f65f96583611d485",
+  "bundle_bytes": 35790934,
+  "unity_engine": "2022.3.62f3c1",
+  "unityfs_version": 8,
+  "luajit_dump_version": 2,
+  "luajit_dump_flags": 10,
+  "total_textassets": 10267,
+  "cs_sc_packet_names_unchanged": true,
+  "all_protocol_chunks_single_prototype": true,
+  "static_only": true,
+  "client_runtime_tested": false,
+  "duplicate_groups": [
+    {
+      "original_name": "activity_point_net_rec",
+      "qualified_names": [
+        "p77_pb.activity_point_net_rec",
+        "p78_pb.activity_point_net_rec"
+      ],
+      "scalar_shape_variants": 1
+    },
+    {
+      "original_name": "assignment_info",
+      "qualified_names": [
+        "p14_pb.assignment_info",
+        "p28_pb.assignment_info"
+      ],
+      "scalar_shape_variants": 1
+    },
+    {
+      "original_name": "battle_end_info_net_rec",
+      "qualified_names": [
+        "p77_pb.battle_end_info_net_rec",
+        "p78_pb.battle_end_info_net_rec"
+      ],
+      "scalar_shape_variants": 1
+    },
+    {
+      "original_name": "battle_record",
+      "qualified_names": [
+        "p89_pb.battle_record",
+        "p90_pb.battle_record"
+      ],
+      "scalar_shape_variants": 2
+    },
+    {
+      "original_name": "bp_assignment_net_rec",
+      "qualified_names": [
+        "p62_pb.bp_assignment_net_rec",
+        "p83_pb.bp_assignment_net_rec"
+      ],
+      "scalar_shape_variants": 1
+    },
+    {
+      "original_name": "bp_submit_net_rec",
+      "qualified_names": [
+        "p62_pb.bp_submit_net_rec",
+        "p83_pb.bp_submit_net_rec"
+      ],
+      "scalar_shape_variants": 1
+    },
+    {
+      "original_name": "chess_map_net_rec",
+      "qualified_names": [
+        "p49_pb.chess_map_net_rec",
+        "p80_pb.chess_map_net_rec",
+        "p85_pb.chess_map_net_rec"
+      ],
+      "scalar_shape_variants": 3
+    },
+    {
+      "original_name": "crickets_action_net_rec",
+      "qualified_names": [
+        "p39_pb.crickets_action_net_rec",
+        "p58_pb.crickets_action_net_rec"
+      ],
+      "scalar_shape_variants": 2
+    },
+    {
+      "original_name": "crickets_round_net_rec",
+      "qualified_names": [
+        "p39_pb.crickets_round_net_rec",
+        "p58_pb.crickets_round_net_rec"
+      ],
+      "scalar_shape_variants": 2
+    },
+    {
+      "original_name": "crickets_round_score_net_rec",
+      "qualified_names": [
+        "p39_pb.crickets_round_score_net_rec",
+        "p58_pb.crickets_round_score_net_rec"
+      ],
+      "scalar_shape_variants": 1
+    },
+    {
+      "original_name": "dorm_pos_net_rec",
+      "qualified_names": [
+        "p39_pb.dorm_pos_net_rec",
+        "p58_pb.dorm_pos_net_rec"
+      ],
+      "scalar_shape_variants": 1
+    },
+    {
+      "original_name": "enchant_effect_net_rec",
+      "qualified_names": [
+        "p13_pb.enchant_effect_net_rec",
+        "p17_pb.enchant_effect_net_rec",
+        "p32_pb.enchant_effect_net_rec",
+        "p48_pb.enchant_effect_net_rec",
+        "p54_pb.enchant_effect_net_rec"
+      ],
+      "scalar_shape_variants": 1
+    },
+    {
+      "original_name": "enchant_slot_net_rec",
+      "qualified_names": [
+        "p13_pb.enchant_slot_net_rec",
+        "p17_pb.enchant_slot_net_rec",
+        "p32_pb.enchant_slot_net_rec",
+        "p48_pb.enchant_slot_net_rec",
+        "p54_pb.enchant_slot_net_rec"
+      ],
+      "scalar_shape_variants": 2
+    },
+    {
+      "original_name": "enchant_slot_preview_net_rec",
+      "qualified_names": [
+        "p13_pb.enchant_slot_preview_net_rec",
+        "p17_pb.enchant_slot_preview_net_rec"
+      ],
+      "scalar_shape_variants": 1
+    },
+    {
+      "original_name": "equip_list",
+      "qualified_names": [
+        "p13_pb.equip_list",
+        "p14_pb.equip_list"
+      ],
+      "scalar_shape_variants": 1
+    },
+    {
+      "original_name": "equip_net_rec",
+      "qualified_names": [
+        "p32_pb.equip_net_rec",
+        "team_hrl_pb.equip_net_rec"
+      ],
+      "scalar_shape_variants": 2
+    },
+    {
+      "original_name": "exhibition_brief_net_rec",
+      "qualified_names": [
+        "p39_pb.exhibition_brief_net_rec",
+        "p58_pb.exhibition_brief_net_rec"
+      ],
+      "scalar_shape_variants": 2
+    },
+    {
+      "original_name": "export_auto_chessboard",
+      "qualified_names": [
+        "p89_pb.export_auto_chessboard",
+        "p90_pb.export_auto_chessboard"
+      ],
+      "scalar_shape_variants": 2
+    },
+    {
+      "original_name": "export_buff",
+      "qualified_names": [
+        "p89_pb.export_buff",
+        "p90_pb.export_buff"
+      ],
+      "scalar_shape_variants": 1
+    },
+    {
+      "original_name": "export_chess",
+      "qualified_names": [
+        "p89_pb.export_chess",
+        "p90_pb.export_chess"
+      ],
+      "scalar_shape_variants": 1
+    },
+    {
+      "original_name": "four_dimensional_array",
+      "qualified_names": [
+        "p80_pb.four_dimensional_array",
+        "p85_pb.four_dimensional_array"
+      ],
+      "scalar_shape_variants": 1
+    },
+    {
+      "original_name": "furniture_pos_net_rec",
+      "qualified_names": [
+        "p39_pb.furniture_pos_net_rec",
+        "p58_pb.furniture_pos_net_rec"
+      ],
+      "scalar_shape_variants": 1
+    },
+    {
+      "original_name": "heart_demon_activity_info_rec",
+      "qualified_names": [
+        "p11_pb.heart_demon_activity_info_rec",
+        "p64_pb.heart_demon_activity_info_rec"
+      ],
+      "scalar_shape_variants": 1
+    },
+    {
+      "original_name": "heart_demon_challenge_info",
+      "qualified_names": [
+        "p11_pb.heart_demon_challenge_info",
+        "p64_pb.heart_demon_challenge_info",
+        "p75_pb.heart_demon_challenge_info"
+      ],
+      "scalar_shape_variants": 3
+    },
+    {
+      "original_name": "hero_exclusive_skill_net_rec",
+      "qualified_names": [
+        "hero_hrl_pb.hero_exclusive_skill_net_rec",
+        "p48_pb.hero_exclusive_skill_net_rec"
+      ],
+      "scalar_shape_variants": 2
+    },
+    {
+      "original_name": "hero_info_net_rec",
+      "qualified_names": [
+        "p32_pb.hero_info_net_rec",
+        "team_hrl_pb.hero_info_net_rec"
+      ],
+      "scalar_shape_variants": 2
+    },
+    {
+      "original_name": "hero_net_rec",
+      "qualified_names": [
+        "p14_pb.hero_net_rec",
+        "team_hrl_pb.hero_net_rec"
+      ],
+      "scalar_shape_variants": 2
+    },
+    {
+      "original_name": "item_net_rec",
+      "qualified_names": [
+        "item_hrl_pb.item_net_rec",
+        "p48_pb.item_net_rec"
+      ],
+      "scalar_shape_variants": 2
+    },
+    {
+      "original_name": "log_net_rec",
+      "qualified_names": [
+        "p38_pb.log_net_rec",
+        "p49_pb.log_net_rec"
+      ],
+      "scalar_shape_variants": 2
+    },
+    {
+      "original_name": "matrix_artifact_net_rec",
+      "qualified_names": [
+        "p26_pb.matrix_artifact_net_rec",
+        "p29_pb.matrix_artifact_net_rec",
+        "p48_pb.matrix_artifact_net_rec"
+      ],
+      "scalar_shape_variants": 1
+    },
+    {
+      "original_name": "matrix_attribute_net_rec",
+      "qualified_names": [
+        "p26_pb.matrix_attribute_net_rec",
+        "p29_pb.matrix_attribute_net_rec",
+        "p48_pb.matrix_attribute_net_rec"
+      ],
+      "scalar_shape_variants": 1
+    },
+    {
+      "original_name": "matrix_event_net_rec",
+      "qualified_names": [
+        "p26_pb.matrix_event_net_rec",
+        "p29_pb.matrix_event_net_rec",
+        "p48_pb.matrix_event_net_rec"
+      ],
+      "scalar_shape_variants": 1
+    },
+    {
+      "original_name": "matrix_game_end_net_rec",
+      "qualified_names": [
+        "p26_pb.matrix_game_end_net_rec",
+        "p29_pb.matrix_game_end_net_rec",
+        "p48_pb.matrix_game_end_net_rec"
+      ],
+      "scalar_shape_variants": 2
+    },
+    {
+      "original_name": "matrix_hero_net_rec",
+      "qualified_names": [
+        "p26_pb.matrix_hero_net_rec",
+        "p29_pb.matrix_hero_net_rec",
+        "p48_pb.matrix_hero_net_rec"
+      ],
+      "scalar_shape_variants": 2
+    },
+    {
+      "original_name": "matrix_phase_net_rec",
+      "qualified_names": [
+        "p26_pb.matrix_phase_net_rec",
+        "p29_pb.matrix_phase_net_rec",
+        "p48_pb.matrix_phase_net_rec"
+      ],
+      "scalar_shape_variants": 2
+    },
+    {
+      "original_name": "matrix_reward_net_rec",
+      "qualified_names": [
+        "p26_pb.matrix_reward_net_rec",
+        "p29_pb.matrix_reward_net_rec",
+        "p48_pb.matrix_reward_net_rec"
+      ],
+      "scalar_shape_variants": 1
+    },
+    {
+      "original_name": "matrix_stackable_item_net_rec",
+      "qualified_names": [
+        "p26_pb.matrix_stackable_item_net_rec",
+        "p29_pb.matrix_stackable_item_net_rec"
+      ],
+      "scalar_shape_variants": 1
+    },
+    {
+      "original_name": "mission_info_net_rec",
+      "qualified_names": [
+        "p65_pb.mission_info_net_rec",
+        "p76_pb.mission_info_net_rec",
+        "p79_pb.mission_info_net_rec"
+      ],
+      "scalar_shape_variants": 3
+    },
+    {
+      "original_name": "oper_net_rec",
+      "qualified_names": [
+        "p39_pb.oper_net_rec",
+        "p58_pb.oper_net_rec"
+      ],
+      "scalar_shape_variants": 1
+    },
+    {
+      "original_name": "player_net_rec",
+      "qualified_names": [
+        "p14_pb.player_net_rec",
+        "p54_pb.player_net_rec"
+      ],
+      "scalar_shape_variants": 2
+    },
+    {
+      "original_name": "point_stage_rec",
+      "qualified_names": [
+        "p79_pb.point_stage_rec",
+        "p83_pb.point_stage_rec"
+      ],
+      "scalar_shape_variants": 2
+    },
+    {
+      "original_name": "position",
+      "qualified_names": [
+        "p49_pb.position",
+        "p80_pb.position",
+        "p85_pb.position"
+      ],
+      "scalar_shape_variants": 1
+    },
+    {
+      "original_name": "puzzle_info",
+      "qualified_names": [
+        "p60_pb.puzzle_info",
+        "p65_pb.puzzle_info"
+      ],
+      "scalar_shape_variants": 2
+    },
+    {
+      "original_name": "reward_net_rec",
+      "qualified_names": [
+        "p62_pb.reward_net_rec",
+        "p67_pb.reward_net_rec"
+      ],
+      "scalar_shape_variants": 2
+    },
+    {
+      "original_name": "schedule_info",
+      "qualified_names": [
+        "p65_pb.schedule_info",
+        "p83_pb.schedule_info"
+      ],
+      "scalar_shape_variants": 2
+    },
+    {
+      "original_name": "stage_info",
+      "qualified_names": [
+        "p65_pb.stage_info",
+        "p86_pb.stage_info"
+      ],
+      "scalar_shape_variants": 2
+    },
+    {
+      "original_name": "star",
+      "qualified_names": [
+        "p24_pb.star",
+        "p54_pb.star"
+      ],
+      "scalar_shape_variants": 2
+    },
+    {
+      "original_name": "team_info_net_rec",
+      "qualified_names": [
+        "p44_pb.team_info_net_rec",
+        "p72_pb.team_info_net_rec",
+        "p84_pb.team_info_net_rec"
+      ],
+      "scalar_shape_variants": 3
+    },
+    {
+      "original_name": "teams_net_rec",
+      "qualified_names": [
+        "p49_pb.teams_net_rec",
+        "p63_pb.teams_net_rec"
+      ],
+      "scalar_shape_variants": 2
+    },
+    {
+      "original_name": "three_dimensional_array",
+      "qualified_names": [
+        "p80_pb.three_dimensional_array",
+        "p85_pb.three_dimensional_array"
+      ],
+      "scalar_shape_variants": 1
+    },
+    {
+      "original_name": "two_dimensional_array",
+      "qualified_names": [
+        "p80_pb.two_dimensional_array",
+        "p85_pb.two_dimensional_array"
+      ],
+      "scalar_shape_variants": 1
+    },
+    {
+      "original_name": "use_item",
+      "qualified_names": [
+        "p17_pb.use_item",
+        "p34_pb.use_item"
+      ],
+      "scalar_shape_variants": 2
+    },
+    {
+      "original_name": "value_net_rec",
+      "qualified_names": [
+        "p80_pb.value_net_rec",
+        "p85_pb.value_net_rec"
+      ],
+      "scalar_shape_variants": 1
+    }
+  ],
+  "source_messages": 3061,
+  "output_messages": 3062,
+  "source_fields": 6889,
+  "output_fields": 6892,
+  "compatibility_aliases": [
+    {
+      "name": "crickets_round_score_net_rec",
+      "target": "p58_pb.crickets_round_score_net_rec",
+      "reason": "Alpha codec explicitly inserts crickets_round_net_rec fields referencing this bare name for dance protocols 58186/58187/58164/58165. Source p39 and p58 score shapes are identical.",
+      "source": "https://github.com/Mint-ARK/Alpha-Persei-Cluster/blob/83c03f1d75004ecb9f0ac1484676f6b5181dfa4e/v5_server/codec.py#L94-L105"
+    }
+  ],
+  "schema_sha256": "b9101c965ed4f75317aa9c0199e17e5a7d2c3e0c0e23b982217a960b1a6ee79f"
+}

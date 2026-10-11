@@ -1,0 +1,14 @@
+{
+    "manifest_version": 1,
+    "tuple_id": "candidate-5.3.1-unverified",
+    "state": "observed",
+    "identity": {
+        "platform": "unknown",
+        "channel": "unknown",
+        "architecture": "unknown",
+        "app_version": "unknown",
+        "resource_version": "unknown"
+    },
+    "capabilities": { "hall": "unverified" },
+    "artifacts": []
+}

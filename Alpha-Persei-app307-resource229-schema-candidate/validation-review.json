@@ -1,0 +1,205 @@
+{
+  "method": "Independent standard-library data parser using official LuaJIT opcode table and official protobuf type/label enums; no downloaded code executed",
+  "bundle_md5": "86add1e9d150efa2464ec96f0579a0b9",
+  "protocol_files": 92,
+  "descriptors_verified": 3061,
+  "fields_verified": 6889,
+  "raw_descriptor_differences": 0,
+  "schema_mapping_differences": 0,
+  "normalized_name_collisions": 0,
+  "message_refs_verified": 1368,
+  "unresolved_refs": 0,
+  "qualified_names": 124,
+  "final_candidate_messages": 3062,
+  "final_candidate_fields": 6892,
+  "compatibility_aliases_verified": {
+    "crickets_round_score_net_rec": "p58_pb.crickets_round_score_net_rec"
+  },
+  "wire_packet_names_modified": [],
+  "opcode_counts": {
+    "GGET": 25986,
+    "KSTR": 81724,
+    "CALL": 13282,
+    "TGETS": 141689,
+    "TNEW": 17005,
+    "TSETS": 52697,
+    "GSET": 6122,
+    "KSHORT": 38875,
+    "KPRI": 10441,
+    "TSETB": 6889,
+    "RET1": 92,
+    "TGETV": 19144,
+    "TSETV": 42049
+  },
+  "symbolic_call_counts": {
+    "global/require": 179,
+    "global/module": 92,
+    "module/protobuf/Descriptor": 3061,
+    "module/protobuf/FieldDescriptor": 6889,
+    "module/protobuf/Message": 3061
+  },
+  "numeric_constants": 0,
+  "schema_sha256": "b9101c965ed4f75317aa9c0199e17e5a7d2c3e0c0e23b982217a960b1a6ee79f",
+  "public_representative_field_checks": 20,
+  "public_p10_git_blob_sha": "8d202c5bd546a67630a39ac3c1980400610e49e2",
+  "public_materialization_extra_newline": true,
+  "public_p10_url": "https://github.com/PackageInstaller/DataTable/blob/83b4bf07a62a73b05e74c22f1c47e59ae0983ae2/MasterData/Lua/x64/protocol/p10_pb.lua",
+  "representative_messages": [
+    {
+      "name": "sc_10039",
+      "fields": [
+        {
+          "name": "result",
+          "number": 1,
+          "type": "uint32",
+          "label": "required",
+          "ref": null
+        },
+        {
+          "name": "server_id",
+          "number": 2,
+          "type": "uint32",
+          "label": "required",
+          "ref": null
+        },
+        {
+          "name": "ip",
+          "number": 3,
+          "type": "string",
+          "label": "required",
+          "ref": null
+        },
+        {
+          "name": "port",
+          "number": 4,
+          "type": "uint32",
+          "label": "required",
+          "ref": null
+        },
+        {
+          "name": "user_id",
+          "number": 5,
+          "type": "uint64",
+          "label": "required",
+          "ref": null
+        },
+        {
+          "name": "gstoken",
+          "number": 6,
+          "type": "string",
+          "label": "required",
+          "ref": null
+        },
+        {
+          "name": "timestamp",
+          "number": 7,
+          "type": "uint32",
+          "label": "required",
+          "ref": null
+        },
+        {
+          "name": "is_new_player",
+          "number": 8,
+          "type": "uint32",
+          "label": "optional",
+          "ref": null
+        },
+        {
+          "name": "ban_reason",
+          "number": 9,
+          "type": "string",
+          "label": "optional",
+          "ref": null
+        },
+        {
+          "name": "unblocking_time",
+          "number": 10,
+          "type": "uint32",
+          "label": "optional",
+          "ref": null
+        },
+        {
+          "name": "countdown_info",
+          "number": 11,
+          "type": "message",
+          "label": "optional",
+          "ref": "countdown_net_rec"
+        },
+        {
+          "name": "i18n_info",
+          "number": 12,
+          "type": "message",
+          "label": "repeated",
+          "ref": "banned_i18n_net_rec"
+        }
+      ]
+    },
+    {
+      "name": "sc_10043",
+      "fields": [
+        {
+          "name": "result",
+          "number": 1,
+          "type": "uint32",
+          "label": "required",
+          "ref": null
+        },
+        {
+          "name": "register_timestamp",
+          "number": 2,
+          "type": "uint32",
+          "label": "required",
+          "ref": null
+        },
+        {
+          "name": "timestamp",
+          "number": 3,
+          "type": "uint32",
+          "label": "required",
+          "ref": null
+        },
+        {
+          "name": "verify_timestamp",
+          "number": 4,
+          "type": "uint32",
+          "label": "required",
+          "ref": null
+        },
+        {
+          "name": "uid_sign",
+          "number": 5,
+          "type": "string",
+          "label": "required",
+          "ref": null
+        }
+      ]
+    },
+    {
+      "name": "sc_10051",
+      "fields": [
+        {
+          "name": "state",
+          "number": 1,
+          "type": "uint32",
+          "label": "required",
+          "ref": null
+        },
+        {
+          "name": "timestamp",
+          "number": 2,
+          "type": "uint32",
+          "label": "required",
+          "ref": null
+        },
+        {
+          "name": "verify_timestamp",
+          "number": 3,
+          "type": "uint32",
+          "label": "required",
+          "ref": null
+        }
+      ]
+    }
+  ],
+  "runtime_test_performed": false
+}

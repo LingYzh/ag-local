@@ -1,0 +1,50 @@
+{
+    "passed": true,
+    "timestamp": "2026-10-11T08:58:25.303Z",
+    "environment": {
+        "appVersion": "0.1.0",
+        "electron": "44.7.0",
+        "node": "24.21.0",
+        "platform": "win32",
+        "architecture": "x64",
+        "mode": "foundation"
+    },
+    "checks": [
+        "sandboxed renderer has no Node globals",
+        "bridge exposes six semantic methods",
+        "foundation view rendered",
+        "production CSP blocks network and embedded frames",
+        "actual Electron environment over IPC",
+        "inspection requires main-process directory selection",
+        "directory selection button uses semantic IPC",
+        "private child reports diagnostic READY",
+        "observed fixture cannot claim business readiness",
+        "shutdown acknowledges and child exits",
+        "restart creates a fresh identity",
+        "owned child crash detected",
+        "restart after crash",
+        "inspection button renders the real report",
+        "UI releases its operation lock",
+        "dark theme text uses the native light foreground"
+    ],
+    "instanceIds": [
+        "adcabaa3-61a5-4ced-a6e5-59fa564ec7f0",
+        "fe727c3a-477b-46fa-ae88-290a06abb9f2",
+        "a8d6c367-3730-4c1a-ab21-bf963c51c27c"
+    ],
+    "report": {
+        "tupleId": "candidate-5.3.1-unverified",
+        "state": "observed",
+        "artifactsVerified": 0,
+        "manifestComplete": false,
+        "declaredHallPassed": false,
+        "businessReady": false,
+        "issues": [
+            "identity unknown or incomplete: platform, channel, architecture, app_version, resource_version",
+            "runtime closure is incomplete: schema, protocol_overlay, runtime_lock, content, seed, login_plan, client_exe, client_sdk, client_index, client_scripts",
+            "observed bundles are diagnostic only",
+            "hall capability is unverified"
+        ],
+        "schema": null
+    }
+}

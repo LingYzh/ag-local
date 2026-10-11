@@ -1,0 +1,13 @@
+# Keep source text consistent across Windows and Unix checkouts.
+* text=auto eol=lf
+
+# Markdown uses trailing spaces for intentional line breaks.
+*.md whitespace=-blank-at-eol
+
+# These artifacts are identified by hashes of their original bytes.
+v5_server/artifacts/** -text
+Alpha-Persei-app307-resource229-schema-candidate/*.json -text
+docs/refactor/login-observation-307-321.json -text
+
+*.png binary
+*.zip binary

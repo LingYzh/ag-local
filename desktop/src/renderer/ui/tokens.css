@@ -1,0 +1,27 @@
+:root {
+    --ap-space-1: 4px;
+    --ap-space-2: 8px;
+    --ap-space-3: 12px;
+    --ap-space-4: 16px;
+    --ap-space-5: 24px;
+    --ap-space-6: 32px;
+
+    --ap-sidebar-width: 252px;
+    --ap-layout-min-width: 320px;
+    --ap-token-swatch-height: 32px;
+    --ap-token-spacing-label-width: 48px;
+    --ap-token-spacing-name-width: 112px;
+}
+
+.v-theme--light,
+.v-theme--dark {
+    --ap-color-page: rgb(var(--v-theme-background));
+    --ap-color-surface: rgb(var(--v-theme-surface));
+    --ap-color-text: rgb(var(--v-theme-on-surface));
+    --ap-color-muted: rgba(var(--v-theme-on-surface), var(--v-medium-emphasis-opacity));
+    --ap-color-border: rgba(var(--v-border-color), var(--v-border-opacity));
+    --ap-color-accent: rgb(var(--v-theme-primary));
+    --ap-color-success: rgb(var(--v-theme-success));
+    --ap-color-warning: rgb(var(--v-theme-warning));
+    --ap-color-danger: rgb(var(--v-theme-error));
+}

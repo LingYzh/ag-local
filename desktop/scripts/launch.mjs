@@ -1,0 +1,20 @@
+import { spawn } from 'node:child_process';
+import { mkdir, readFile } from 'node:fs/promises';
+import { resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import electron from 'electron';
+
+const smoke = process.argv.includes('--smoke');
+const root = fileURLToPath(new URL('..', import.meta.url));
+const packaged = process.argv.includes('--packaged');
+const output = resolve(root, packaged ? 'qa/packaged' : 'qa/electron');
+if (smoke) await mkdir(output, { recursive: true });
+const metadata = packaged ? JSON.parse(await readFile(resolve(root, 'out/latest-package.json'), 'utf8')) : null;
+const executable = metadata?.executable || electron;
+const args = packaged ? [] : [root];
+if (smoke) args.push('--foundation-smoke', `--smoke-output=${output}`);
+const environment = { ...process.env };
+delete environment.ELECTRON_RUN_AS_NODE;
+const child = spawn(executable, args, { stdio: 'inherit', env: environment, windowsHide: smoke, cwd: packaged ? resolve(root, '..') : root });
+child.on('error', error => { console.error(error.message); process.exitCode = 1; });
+child.on('exit', code => { process.exitCode = code ?? 1; });
