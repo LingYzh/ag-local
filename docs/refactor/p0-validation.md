@@ -9,7 +9,8 @@ TS 监督器现在保存实例首次故障。关闭已确认但退出超时后�
 在独立 checkout 中先加入新增测试、保留基线监督器，12 项生命周期测试中 3 项失败；应用修复后，类型检查通过，完整 Vitest 55 项运行、54 项通过、1 项跳过。跳过项是当前 Windows 权限下不能创建符号链接的 bundle 边界检查，未计为通过。
 
 - [基线失败记录](validation/p0/h01-red.json)：新增测试与基线监督器哈希、失败用例。
-- [修复后桌面测试](validation/p0/desktop-tests.json)：测试名称、结果及实际被测源码清单。
+- [修复后桌面测试](validation/p0/desktop-tests.json)：初次 P0 提交的测试名称、结果及实际被测源码清单。
+- [CI 路径断言修正后的桌面复跑](validation/p0/desktop-tests-canonical-path.json)：55 项运行、54 通过、1 跳过，类型检查通过。
 
 ## H02：独立 Python 工具环境
 
@@ -47,7 +48,7 @@ CLI 要求显式输入、schema、双方预期 SHA-256 和新输出目录，拒�
 
 桌面测试和两项 smoke 使用从基线新建的独立 checkout，以 `npm ci --ignore-scripts` 安装锁定依赖，再应用本轮 H01 修复。报告绑定该 checkout 的实际源码，而不是推测主目录与打包结果一致。历史 [16 项 source 报告](validation/electron-source-smoke.json) 和 [16 项 package 报告](validation/electron-package-smoke.json) 保持原样，不改写历史检查数。
 
-最终 Python 套件同样在独立 checkout 中执行，使用 H02 新运行时及环境；86 项被记录源码及构建输入的哈希逐项与待提交工作区一致。五组分别为控制入口 13、framing 15、静态恢复 44、证据工具 33、环境契约 7。唯一跳过项是当前 Windows 权限下的目录 symlink 检查，保留明确原因。
+最终本地 Python 套件同样在独立 checkout 中执行，使用 H02 新运行时及环境；86 项被记录源码及构建输入的哈希逐项与初次 P0 提交 `e7f7077` 一致。五组分别为控制入口 13、framing 15、静态恢复 44、证据工具 33、环境契约 7。唯一跳过项是当前 Windows 权限下的目录 symlink 检查，保留明确原因。之后的 CI 修正只改变客户端识别测试的路径断言；本地报告保留实际运行时的源码身份，远端结果另列。
 
 原始 PCAP 为 131,622,688 字节，SHA-256 为 `e1218b5dcff6d89578fcc7f8d47df0932f3c02f37d207fb0a6a43b3d0f8449db`，本轮前后哈希一致。去重后为上行 18、下行 220，共 238 帧；对应既有网关 2 帧与游戏 236 帧范围。未知字段、wire 冲突、required 缺失和 incomplete 均为 0；9 个 flag-1 下行全部有界解压成功。多采集视角的 714 次原始匹配及 27 次压缩观察另列，不能计作新增协议帧。
 
@@ -61,7 +62,7 @@ CLI 要求显式输入、schema、双方预期 SHA-256 和新输出目录，拒�
 
 [P0 工作流](../../.github/workflows/p0-validation.yml) 在 Windows runner 上检查 Node / npm 版本、安装锁定桌面依赖、运行类型检查和 Vitest，然后调用与本地相同的 Python 环境脚本，运行全部合成 Python 套件。官方 Actions 固定到完整提交 SHA。测试与环境报告作为运行附件保存 14 天。
 
-真实客户端、私人 PCAP 和本地桌面 smoke 不进入公共 CI。当前尚待代码提交推送后取得实际运行记录；工作流文件存在不算 CI 通过。
+真实客户端、私人 PCAP 和本地桌面 smoke 不进入公共 CI。[首次实际运行](validation/p0/ci-initial-failure.json) 在既有客户端识别测试中失败：runner 的 TEMP 使用 Windows 短路径，生产代码返回正确的真实路径，测试以 `path.resolve` 比较导致误判。已将断言改为文件系统 `realpath` 并完成本地全套桌面复跑；Python 步骤在该次 CI 中未执行，不计为通过。后续远端运行尚待核验，工作流文件存在不算 CI 通过。
 
 ## 验收边界与下一步
 

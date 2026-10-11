@@ -1,0 +1,101 @@
+{
+  "run_id": 38146081326,
+  "run_url": "https://github.com/LingYzh/ag-local/actions/runs/38146081326",
+  "head_sha": "e7f70771aadf941865cce174f747bd179245ea12",
+  "event": "push",
+  "status": "completed",
+  "conclusion": "failure",
+  "jobs": [
+    {
+      "id": 114489610877,
+      "name": "synthetic-validation",
+      "status": "completed",
+      "conclusion": "failure",
+      "run_id": 38146081326,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Check tool versions",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Install locked desktop dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Type check",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Synthetic desktop tests",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 7
+        },
+        {
+          "name": "Create independent Python environment",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 8
+        },
+        {
+          "name": "Synthetic Python suites and source provenance",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 9
+        },
+        {
+          "name": "Archive synthetic test evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10
+        },
+        {
+          "name": "Post Run actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 19
+        },
+        {
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 20
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 21
+        }
+      ]
+    }
+  ],
+  "reason": "The existing inventory test compared path.resolve(TEMP fixture) with the producer's realpath result. Windows runner TEMP uses a short path alias, so the assertion rejected the same directory's canonical identity.",
+  "python_suites_executed": false,
+  "resolution": "Compare the report root with filesystem realpath in the test; retain production canonicalization and all checks."
+}

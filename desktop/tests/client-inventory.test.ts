@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, it } from 'vitest';
 import { createHash } from 'node:crypto';
-import { mkdir, mkdtemp, rm, symlink, writeFile } from 'node:fs/promises';
+import { mkdir, mkdtemp, realpath, rm, symlink, writeFile } from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
 import { FoundationError } from '../src/service/compatibility/errors';
@@ -103,7 +103,8 @@ describe('inventoryClient', () => {
 
         // The IPC validator must accept every fingerprint emitted by the real producer.
         expect(isClientInventory(report)).toBe(true);
-        expect(report.root).toBe(path.resolve(fixture.root));
+        // Windows TEMP can use an 8.3 alias; inventory reports the resolved filesystem identity.
+        expect(report.root).toBe(await realpath(fixture.root));
         expect(report.state).toBe('observed');
         expect(report.gate).toBe('G0');
         expect(report.businessReady).toBe(false);
