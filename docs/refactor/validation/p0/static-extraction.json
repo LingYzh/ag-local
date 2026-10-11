@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "static_only": true,
+  "runtime_test_performed": false,
+  "compatibility_admitted": false,
+  "scripts_input_sha256": "d39fcc02eb38d4966d3732d9008d75cb41913194942a4800ad5a7585104a0019",
+  "environment_report_sha256": "e032becb0f31a9220aba30cf5d608d758fb2070575c8b91c7080550aea0748c9",
+  "outputs": {
+    "schema.json": {
+      "first_sha256": "917010c2bc0cf4e4bfb21dfdf66c77128cff61d9a47c848a30f0a1c1d4a842b0",
+      "second_sha256": "917010c2bc0cf4e4bfb21dfdf66c77128cff61d9a47c848a30f0a1c1d4a842b0",
+      "size_bytes": 26504729,
+      "byte_identical": true
+    },
+    "schema.sha256": {
+      "first_sha256": "c2c1e776c639e0f29b243b892a453917cc14787afad5a58c6dea74461eaa222e",
+      "second_sha256": "c2c1e776c639e0f29b243b892a453917cc14787afad5a58c6dea74461eaa222e",
+      "size_bytes": 65,
+      "byte_identical": true
+    },
+    "extraction-report.json": {
+      "first_sha256": "885dd172e020c039f65d73a0ea3733e7aff87a9c02800e34cd071b83a5fec895",
+      "second_sha256": "885dd172e020c039f65d73a0ea3733e7aff87a9c02800e34cd071b83a5fec895",
+      "size_bytes": 7815768,
+      "byte_identical": true
+    }
+  },
+  "source_sha256": {
+    "tools/python/run-static-extract.py": "ee8b58446cff8237805c2c46951f5eee2aefa3a316f759541df9ef7b250dd0bc"
+  },
+  "protocol_assets": 92,
+  "messages": 3061,
+  "fields": 6889,
+  "method": "Two sequential isolated wrapper CLI executions using the fresh verified CPython runtime and locked environment; private bundle remains local.",
+  "extractor_source_binding": {
+    "__init__.py": "fb14b76de212d386a29efdebf8f3d32af859344ccb1831fd3d58bc0614fe731c",
+    "bundle.py": "58c02acf9d3197340118233b068f95dfe011545a91a7da109b03247407e9c32e",
+    "bytecode.py": "61a2ad5b3ae3d5c3a7db7877e303b3218add5277fa188360602e86f004d5ec67",
+    "cli.py": "c1bbd6a8230b932b07cdb3c2e3bdcf1b7288fba655d782677e925669b46496ad",
+    "extract.py": "29ec71c3ef32e33d8889f9d906d628cc32177716533a26eaa194ca280ce2a0a4",
+    "schema_ir.py": "ef4638df639bd696775db30acd7e6a27da2abd1c4b4707d0763392aec8a1962c",
+    "static_vm.py": "19739c0af44bc5469931e34165e348a4d5789270a4819522d39a0bf653b082da"
+  }
+}

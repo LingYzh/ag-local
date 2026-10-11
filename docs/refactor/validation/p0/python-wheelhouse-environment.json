@@ -1,0 +1,185 @@
+{
+    "format_version":  1,
+    "generated_utc":  "2026-10-11T13:48:32.1764978Z",
+    "python_distribution":  {
+                                "filename":  "python-3.14.6-amd64.zip",
+                                "url":  "https://www.python.org/ftp/python/3.14.6/python-3.14.6-amd64.zip",
+                                "official_manifest_url":  "https://www.python.org/ftp/python/3.14.6/windows-3.14.6.json",
+                                "expected_sha256":  "75afa83f93b284d19040e24bc440ab741c09582c0d5310504d607a4e08c3dbaf",
+                                "actual_sha256":  "75afa83f93b284d19040e24bc440ab741c09582c0d5310504d607a4e08c3dbaf",
+                                "implementation":  "CPython",
+                                "version":  "3.14.6",
+                                "architecture":  "AMD64",
+                                "sysconfig_platform":  "win-amd64",
+                                "pointer_bits":  64,
+                                "gil_disabled":  0,
+                                "runtime_executable":  "runtime/python.exe",
+                                "runtime_executable_sha256":  "03168c01b7b7491423350e82c26fee71f35b43694d1319d3c668bda6903a0c38",
+                                "venv_executable":  "venv/Scripts/python.exe",
+                                "venv_executable_sha256":  "199ce15a9f0d4f9522edba59338e4879d28cf61f88e377b8164bcb716275ed22"
+                            },
+    "pip_bootstrap":  {
+                          "source":  "ensurepip wheel bundled in the SHA-verified Python ZIP",
+                          "version":  "26.1.2",
+                          "filename":  "pip-26.1.2-py3-none-any.whl",
+                          "sha256":  "382ff9f685ee3bc25864f820aa50505825f10f5458ffff07e30a6d96e5715cab"
+                      },
+    "dependency_lock":  {
+                            "path":  "tools/python/requirements-win-cp314-x64.lock",
+                            "sha256":  "d38f3b944957676e00b57a817aded2d9009b88c93ef6f9b4998b60b0bc3919cb",
+                            "packages":  [
+                                             {
+                                                 "name":  "archspec",
+                                                 "version":  "0.2.6",
+                                                 "wheel_sha256":  "22463371fe8e9fa92fa144bf320cb445373a99f2ca6a5914c890e0c0b7816f8f",
+                                                 "installed_version":  "0.2.6"
+                                             },
+                                             {
+                                                 "name":  "astc-encoder-py",
+                                                 "version":  "0.1.12",
+                                                 "wheel_sha256":  "a45d375fc6b0ff2cd3d772aab3eef19a6b7f3e067306e11fab37820ea9576121",
+                                                 "installed_version":  "0.1.12"
+                                             },
+                                             {
+                                                 "name":  "attrs",
+                                                 "version":  "26.1.0",
+                                                 "wheel_sha256":  "c647aa4a12dfbad9333ca4e71fe62ddc36f4e63b2d260a37a8b83d2f043ac309",
+                                                 "installed_version":  "26.1.0"
+                                             },
+                                             {
+                                                 "name":  "brotli",
+                                                 "version":  "1.2.0",
+                                                 "wheel_sha256":  "e7c0af964e0b4e3412a0ebf341ea26ec767fa0b4cf81abb5e897c9338b5ad6a3",
+                                                 "installed_version":  "1.2.0"
+                                             },
+                                             {
+                                                 "name":  "etcpak",
+                                                 "version":  "0.9.15",
+                                                 "wheel_sha256":  "669d902eeb774bc6d4df226183c09c3d03c9fc0f47b4c0c20030fc2b39eec2f2",
+                                                 "installed_version":  "0.9.15"
+                                             },
+                                             {
+                                                 "name":  "fmod-toolkit",
+                                                 "version":  "0.1.3",
+                                                 "wheel_sha256":  "a56432c291d0cfbf9e88dcb94e144bc9f244672590871398f8e1891d5d6f3c2e",
+                                                 "installed_version":  "0.1.3"
+                                             },
+                                             {
+                                                 "name":  "fsspec",
+                                                 "version":  "2026.9.0",
+                                                 "wheel_sha256":  "8dd6e646e99ea382bd85f97a45e6b526a442d79423a7dc673f1e2756d05fcb5f",
+                                                 "installed_version":  "2026.9.0"
+                                             },
+                                             {
+                                                 "name":  "lz4",
+                                                 "version":  "4.4.5",
+                                                 "wheel_sha256":  "92159782a4502858a21e0079d77cdcaade23e8a5d252ddf46b0652604300d7be",
+                                                 "installed_version":  "4.4.5"
+                                             },
+                                             {
+                                                 "name":  "pillow",
+                                                 "version":  "12.3.0",
+                                                 "wheel_sha256":  "fdafc9cce40277e0f7a0feabce0ee50dd2fa1800f3b38015e51296b5e814048d",
+                                                 "installed_version":  "12.3.0"
+                                             },
+                                             {
+                                                 "name":  "pyfmodex",
+                                                 "version":  "0.7.2",
+                                                 "wheel_sha256":  "1c42112b788e80ee7b4b57ae25bbbc0a98eb1e32a8e7c9e1246698cdf72efa9d",
+                                                 "installed_version":  "0.7.2"
+                                             },
+                                             {
+                                                 "name":  "texture2ddecoder",
+                                                 "version":  "1.0.6",
+                                                 "wheel_sha256":  "1bad8209d9dfbfc7daf13ea2e545236ea2bbc1e423b2992b6e7563909975a47b",
+                                                 "installed_version":  "1.0.6"
+                                             },
+                                             {
+                                                 "name":  "unitypy",
+                                                 "version":  "1.25.2",
+                                                 "wheel_sha256":  "29e00f0cbce254adcceda7f9d4b7151d2564426a7abb6b73e6de24f911ad938f",
+                                                 "installed_version":  "1.25.2"
+                                             }
+                                         ]
+                        },
+    "execution_sources":  [
+                              {
+                                  "path":  "tools/python/verify-environment.ps1",
+                                  "sha256":  "1a873aacc346089e2ab534f5d25b01bb8110449e497308af513d463f25e5f2fd"
+                              },
+                              {
+                                  "path":  "tests/python_environment/test_environment_contract.py",
+                                  "sha256":  "91ec2e227369abb04934b2000c33bc831dfa76c092727d392f45cb28657f04ea"
+                              }
+                          ],
+    "validation":  {
+                       "isolated_python":  true,
+                       "pip_check":  "passed",
+                       "imports":  "UnityPy 1.25.2 and lz4 4.4.5 passed",
+                       "environment_contract_tests":  "passed",
+                       "wheelhouse_mode":  "existing-verified-wheelhouse",
+                       "wheelhouse":  [
+                                          {
+                                              "name":  "archspec",
+                                              "filename":  "archspec-0.2.6-py3-none-any.whl",
+                                              "sha256":  "22463371fe8e9fa92fa144bf320cb445373a99f2ca6a5914c890e0c0b7816f8f"
+                                          },
+                                          {
+                                              "name":  "astc-encoder-py",
+                                              "filename":  "astc_encoder_py-0.1.12-cp37-abi3-win_amd64.whl",
+                                              "sha256":  "a45d375fc6b0ff2cd3d772aab3eef19a6b7f3e067306e11fab37820ea9576121"
+                                          },
+                                          {
+                                              "name":  "attrs",
+                                              "filename":  "attrs-26.1.0-py3-none-any.whl",
+                                              "sha256":  "c647aa4a12dfbad9333ca4e71fe62ddc36f4e63b2d260a37a8b83d2f043ac309"
+                                          },
+                                          {
+                                              "name":  "brotli",
+                                              "filename":  "brotli-1.2.0-cp314-cp314-win_amd64.whl",
+                                              "sha256":  "e7c0af964e0b4e3412a0ebf341ea26ec767fa0b4cf81abb5e897c9338b5ad6a3"
+                                          },
+                                          {
+                                              "name":  "etcpak",
+                                              "filename":  "etcpak-0.9.15-cp37-abi3-win_amd64.whl",
+                                              "sha256":  "669d902eeb774bc6d4df226183c09c3d03c9fc0f47b4c0c20030fc2b39eec2f2"
+                                          },
+                                          {
+                                              "name":  "fmod-toolkit",
+                                              "filename":  "fmod_toolkit-0.1.3-cp38-abi3.abi3t-win_amd64.whl",
+                                              "sha256":  "a56432c291d0cfbf9e88dcb94e144bc9f244672590871398f8e1891d5d6f3c2e"
+                                          },
+                                          {
+                                              "name":  "fsspec",
+                                              "filename":  "fsspec-2026.9.0-py3-none-any.whl",
+                                              "sha256":  "8dd6e646e99ea382bd85f97a45e6b526a442d79423a7dc673f1e2756d05fcb5f"
+                                          },
+                                          {
+                                              "name":  "lz4",
+                                              "filename":  "lz4-4.4.5-cp314-cp314-win_amd64.whl",
+                                              "sha256":  "92159782a4502858a21e0079d77cdcaade23e8a5d252ddf46b0652604300d7be"
+                                          },
+                                          {
+                                              "name":  "pillow",
+                                              "filename":  "pillow-12.3.0-cp314-cp314-win_amd64.whl",
+                                              "sha256":  "fdafc9cce40277e0f7a0feabce0ee50dd2fa1800f3b38015e51296b5e814048d"
+                                          },
+                                          {
+                                              "name":  "pyfmodex",
+                                              "filename":  "pyfmodex-0.7.2-py3-none-any.whl",
+                                              "sha256":  "1c42112b788e80ee7b4b57ae25bbbc0a98eb1e32a8e7c9e1246698cdf72efa9d"
+                                          },
+                                          {
+                                              "name":  "texture2ddecoder",
+                                              "filename":  "texture2ddecoder-1.0.6-cp311-abi3-win_amd64.whl",
+                                              "sha256":  "1bad8209d9dfbfc7daf13ea2e545236ea2bbc1e423b2992b6e7563909975a47b"
+                                          },
+                                          {
+                                              "name":  "unitypy",
+                                              "filename":  "unitypy-1.25.2-cp314-cp314-win_amd64.whl",
+                                              "sha256":  "29e00f0cbce254adcceda7f9d4b7151d2564426a7abb6b73e6de24f911ad938f"
+                                          }
+                                      ]
+                   },
+    "privacy":  "Repository-relative paths and allowlisted environment metadata only."
+}

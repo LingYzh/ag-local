@@ -1,0 +1,60 @@
+name: P0 reproducible validation
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  synthetic-validation:
+    runs-on: windows-2025
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24.19.0'
+          cache: npm
+          cache-dependency-path: desktop/package-lock.json
+      - name: Check tool versions
+        shell: pwsh
+        run: |
+          node --version
+          npm install --global npm@11.17.0 --no-audit --no-fund
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          npm --version
+          if ((npm --version).Trim() -ne '11.17.0') { throw 'Expected npm 11.17.0' }
+      - name: Install locked desktop dependencies
+        working-directory: desktop
+        run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Type check
+        working-directory: desktop
+        run: npm run check
+      - name: Synthetic desktop tests
+        working-directory: desktop
+        run: npm test -- --reporter=default --reporter=json --outputFile=qa/vitest.json
+      - name: Create independent Python environment
+        shell: pwsh
+        run: |
+          $systemPowerShell = Join-Path $env:SystemRoot 'System32/WindowsPowerShell/v1.0/powershell.exe'
+          & $systemPowerShell -NoProfile -EP Bypass -File tools/python/verify-environment.ps1 -TargetDirectory (Join-Path $env:GITHUB_WORKSPACE 'qa/python-environment-ci') -CreateWheelhouse
+          exit $LASTEXITCODE
+      - name: Synthetic Python suites and source provenance
+        shell: pwsh
+        run: |
+          & 'qa/python-environment-ci/venv/Scripts/python.exe' -I -B tools/validation/run_python_tests.py --output qa/python-tests.json
+          exit $LASTEXITCODE
+      - name: Archive synthetic test evidence
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: p0-synthetic-${{ github.sha }}
+          path: |
+            desktop/qa/vitest.json
+            qa/python-tests.json
+            qa/python-environment-ci/environment-report.json
+          if-no-files-found: warn
+          retention-days: 14

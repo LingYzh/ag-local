@@ -8,6 +8,7 @@
 v5_server/artifacts/** -text
 Alpha-Persei-app307-resource229-schema-candidate/*.json -text
 docs/refactor/login-observation-307-321.json -text
+docs/refactor/validation/p0/*.json -text whitespace=cr-at-eol
 
 *.png binary
 *.zip binary

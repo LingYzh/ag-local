@@ -1,0 +1,3 @@
+# Static recovery only; control, framing, and evidence tools remain stdlib-only.
+UnityPy==1.25.2
+lz4==4.4.5

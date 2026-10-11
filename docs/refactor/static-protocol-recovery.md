@@ -4,8 +4,11 @@
 
 在仓库根目录运行，参数全部使用绝对路径。输出目录必须尚不存在，父目录已经存在，且位于受保护客户端根目录之外。命令拒绝路径中的符号链接或 reparse point，不覆盖已有结果。
 
+先按 [Python 环境说明](../../tools/python/README.md) 建立独立锁定环境。下例使用新的 `qa/python-environment-local` 环境；隔离包装入口显式加入自身仓库的可信导入路径，不依赖旧安装目录或 `PYTHONPATH`。
+
 ```powershell
-& 'E:\Program Files\AetherGazer_Server\runtime\python\python.exe' -B -m v5_server.tools.static_protocol.cli `
+$pythonExe = Join-Path (Get-Location).Path 'qa/python-environment-local/venv/Scripts/python.exe'
+& $pythonExe -I -B tools/python/run-static-extract.py `
     --source-root 'D:\AetherGazerStarter\AetherGazer' `
     --bundle 'D:\AetherGazerStarter\AetherGazer\AetherGazer_Data\StreamingAssets\Windows\f\9\f9468cd00564c3c98e4f819210760be1.ys' `
     --sha256 'd39fcc02eb38d4966d3732d9008d75cb41913194942a4800ad5a7585104a0019' `
@@ -39,7 +42,7 @@
 测试入口：
 
 ```powershell
-& 'E:\Program Files\AetherGazer_Server\runtime\python\python.exe' -B -m unittest discover -s tests/static_protocol -v
+& $pythonExe -I -B tools/validation/run_python_tests.py --group static_protocol --output qa/static-tests-new.json
 ```
 
 测试使用小型字节码和容器夹具验证边界、确定性、引用、声明归属与明确拒绝；真实客户端提取和抓包匹配另外留存结果。后续大厅契约见 [hall-contract.md](hall-contract.md)。

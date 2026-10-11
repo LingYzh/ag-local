@@ -1,0 +1,15 @@
+# Static recovery only: CPython 3.14.6 standard GIL, Windows x64 (win_amd64).
+# Each hash is for the exact wheel selected by pip 26.1.2 with --only-binary=:all:.
+# Direct inputs: requirements.in. No source distributions are included.
+archspec==0.2.6 --hash=sha256:22463371fe8e9fa92fa144bf320cb445373a99f2ca6a5914c890e0c0b7816f8f
+astc-encoder-py==0.1.12 --hash=sha256:a45d375fc6b0ff2cd3d772aab3eef19a6b7f3e067306e11fab37820ea9576121
+attrs==26.1.0 --hash=sha256:c647aa4a12dfbad9333ca4e71fe62ddc36f4e63b2d260a37a8b83d2f043ac309
+brotli==1.2.0 --hash=sha256:e7c0af964e0b4e3412a0ebf341ea26ec767fa0b4cf81abb5e897c9338b5ad6a3
+etcpak==0.9.15 --hash=sha256:669d902eeb774bc6d4df226183c09c3d03c9fc0f47b4c0c20030fc2b39eec2f2
+fmod_toolkit==0.1.3 --hash=sha256:a56432c291d0cfbf9e88dcb94e144bc9f244672590871398f8e1891d5d6f3c2e
+fsspec==2026.9.0 --hash=sha256:8dd6e646e99ea382bd85f97a45e6b526a442d79423a7dc673f1e2756d05fcb5f
+lz4==4.4.5 --hash=sha256:92159782a4502858a21e0079d77cdcaade23e8a5d252ddf46b0652604300d7be
+pillow==12.3.0 --hash=sha256:fdafc9cce40277e0f7a0feabce0ee50dd2fa1800f3b38015e51296b5e814048d
+pyfmodex==0.7.2 --hash=sha256:1c42112b788e80ee7b4b57ae25bbbc0a98eb1e32a8e7c9e1246698cdf72efa9d
+texture2ddecoder==1.0.6 --hash=sha256:1bad8209d9dfbfc7daf13ea2e545236ea2bbc1e423b2992b6e7563909975a47b
+UnityPy==1.25.2 --hash=sha256:29e00f0cbce254adcceda7f9d4b7151d2564426a7abb6b73e6de24f911ad938f

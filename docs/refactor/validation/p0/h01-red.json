@@ -1,0 +1,72 @@
+{
+  "synthetic_only": true,
+  "passed": false,
+  "expected_result_observed": true,
+  "start_time_ms": 1791725391706,
+  "run": 12,
+  "passed_count": 9,
+  "failed_count": 3,
+  "skipped_count": 0,
+  "tests": [
+    {
+      "test": "ServiceSupervisor lifecycle accepts only a matching diagnostics-ready handshake",
+      "result": "passed"
+    },
+    {
+      "test": "ServiceSupervisor lifecycle shares concurrent start calls and forks once",
+      "result": "passed"
+    },
+    {
+      "test": "ServiceSupervisor lifecycle waits for an in-flight start before stopping and rejects new starts while stopping",
+      "result": "passed"
+    },
+    {
+      "test": "ServiceSupervisor lifecycle waits for the shutdown response and owned child exit",
+      "result": "passed"
+    },
+    {
+      "test": "ServiceSupervisor lifecycle rejects a forged shutdown success payload without treating it as an acknowledgement",
+      "result": "passed"
+    },
+    {
+      "test": "ServiceSupervisor lifecycle rejects a malformed bundle report from the worker",
+      "result": "passed"
+    },
+    {
+      "test": "ServiceSupervisor lifecycle rejects in-flight requests and reports a failed state after an unexpected exit",
+      "result": "passed"
+    },
+    {
+      "test": "ServiceSupervisor lifecycle retains a timed-out child and ignores messages from its old instance after restart",
+      "result": "passed"
+    },
+    {
+      "test": "ServiceSupervisor lifecycle preserves an acknowledged shutdown timeout through a retry and late exit, then starts a new instance",
+      "result": "failed"
+    },
+    {
+      "test": "ServiceSupervisor lifecycle keeps the first control fault when an unacknowledged instance exits with code 0",
+      "result": "failed"
+    },
+    {
+      "test": "ServiceSupervisor lifecycle keeps the first control fault when an unacknowledged instance exits with code 9",
+      "result": "failed"
+    },
+    {
+      "test": "ServiceSupervisor lifecycle fails a handshake timeout without discarding ownership or replacing the child",
+      "result": "passed"
+    }
+  ],
+  "node": "24.19.0",
+  "npm": "11.17.0",
+  "clean_npm_ci": true,
+  "raw_report_sha256": "508b530fa613ac1218683a64e50bd5167f919920d2a8c52402b4b729275e8b8d",
+  "provenance": {
+    "baseline_commit": "7aea8f08f82b2853156ced43db9831f561e0caf0",
+    "source_sha256": {
+      "desktop/src/main/service-supervisor.ts": "a797b3762cf33538de21c25d89cc85056dec468baf67c08ca66c40e909b7348a",
+      "desktop/tests/lifecycle.test.ts": "5847911326e228f51533df7e5a49b977254b159a72717567948a2ffc3198e9f7"
+    },
+    "method": "Independent baseline checkout with only the new regression test file applied; expected 3 failures."
+  }
+}

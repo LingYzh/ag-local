@@ -239,6 +239,114 @@ describe('ServiceSupervisor lifecycle', () => {
         await expect(restarting).resolves.toMatchObject({ state: 'READY', instanceId: newInstanceId });
     });
 
+    it('preserves an acknowledged shutdown timeout through a retry and late exit, then starts a new instance', async () => {
+        const { supervisor, children, fork } = createHarness(25);
+        const starting = supervisor.start();
+        const oldChild = children[0];
+        const oldInstanceId = fork.mock.calls[0][1] as string;
+        await Promise.resolve();
+        oldChild.sendReady(oldInstanceId);
+        await starting;
+
+        const stopping = supervisor.stop();
+        const shutdown = oldChild.requests[0];
+        expect(shutdown.command).toBe('shutdown');
+        oldChild.sendResponse(shutdown, runtimeStatus('STOPPED', oldInstanceId));
+        await expect(stopping).rejects.toMatchObject({ code: 'WORKER_EXIT_TIMEOUT' });
+        expect(supervisor.getStatus()).toMatchObject({
+            state: 'FAILED',
+            instanceId: oldInstanceId,
+            lastError: { code: 'WORKER_EXIT_TIMEOUT' }
+        });
+        await expect(supervisor.start()).rejects.toMatchObject({ code: 'WORKER_OWNERSHIP_UNRESOLVED' });
+        expect(fork).toHaveBeenCalledTimes(1);
+
+        const repeatedStop = supervisor.stop();
+        const repeatedShutdown = oldChild.requests[1];
+        if (repeatedShutdown) oldChild.sendResponse(repeatedShutdown, runtimeStatus('STOPPED', oldInstanceId));
+        oldChild.exit(0);
+        await expect(repeatedStop).rejects.toMatchObject({ code: 'WORKER_EXIT_TIMEOUT' });
+        expect(supervisor.getStatus()).toMatchObject({
+            state: 'FAILED',
+            instanceId: oldInstanceId,
+            lastError: { code: 'WORKER_EXIT_TIMEOUT' }
+        });
+
+        const restarting = supervisor.start();
+        const newChild = children[1];
+        const newInstanceId = fork.mock.calls[1][1] as string;
+        expect(newInstanceId).not.toBe(oldInstanceId);
+        await Promise.resolve();
+        oldChild.exit(9);
+        oldChild.sendReady(oldInstanceId);
+        expect(supervisor.getStatus()).toMatchObject({ state: 'PREFLIGHT', instanceId: newInstanceId });
+        newChild.sendReady(newInstanceId);
+        await expect(restarting).resolves.toMatchObject({ state: 'READY', instanceId: newInstanceId });
+
+        const inspection = supervisor.inspect('C:\\fixture');
+        await expect(inspection).rejects.toMatchObject({ code: 'WORKER_REQUEST_TIMEOUT' });
+        expect(supervisor.getStatus()).toMatchObject({
+            state: 'FAILED',
+            instanceId: newInstanceId,
+            lastError: { code: 'WORKER_REQUEST_TIMEOUT' }
+        });
+        oldChild.exit(0);
+        oldChild.sendReady(oldInstanceId);
+        expect(supervisor.getStatus()).toMatchObject({
+            state: 'FAILED',
+            instanceId: newInstanceId,
+            lastError: { code: 'WORKER_REQUEST_TIMEOUT' }
+        });
+        await expect(supervisor.start()).rejects.toMatchObject({ code: 'WORKER_OWNERSHIP_UNRESOLVED' });
+        expect(fork).toHaveBeenCalledTimes(2);
+    });
+
+    it.each([0, 9])('keeps the first control fault when an unacknowledged instance exits with code %i', async exitCode => {
+        const { supervisor, children, fork } = createHarness();
+        const starting = supervisor.start();
+        const oldChild = children[0];
+        const oldInstanceId = fork.mock.calls[0][1] as string;
+        await Promise.resolve();
+        oldChild.sendReady(oldInstanceId);
+        await starting;
+
+        const stopping = supervisor.stop();
+        const shutdown = oldChild.requests[0];
+        oldChild.sendResponse(shutdown, runtimeStatus('STOPPED', randomUUID()));
+        await expect(stopping).rejects.toMatchObject({ code: 'WORKER_RESPONSE_INVALID' });
+        expect(supervisor.getStatus()).toMatchObject({
+            state: 'FAILED',
+            instanceId: oldInstanceId,
+            lastError: { code: 'WORKER_RESPONSE_INVALID' }
+        });
+        await expect(supervisor.start()).rejects.toMatchObject({ code: 'WORKER_OWNERSHIP_UNRESOLVED' });
+        expect(fork).toHaveBeenCalledTimes(1);
+
+        oldChild.exit(exitCode);
+        expect(supervisor.getStatus()).toMatchObject({
+            state: 'FAILED',
+            instanceId: oldInstanceId,
+            lastError: { code: 'WORKER_RESPONSE_INVALID' }
+        });
+        oldChild.exit(exitCode === 0 ? 9 : 0);
+        expect(supervisor.getStatus()).toMatchObject({
+            state: 'FAILED',
+            instanceId: oldInstanceId,
+            lastError: { code: 'WORKER_RESPONSE_INVALID' }
+        });
+
+        const restarting = supervisor.start();
+        const newChild = children[1];
+        const newInstanceId = fork.mock.calls[1][1] as string;
+        expect(newInstanceId).not.toBe(oldInstanceId);
+        await Promise.resolve();
+        oldChild.sendReady(oldInstanceId);
+        oldChild.exit(0);
+        expect(supervisor.getStatus()).toMatchObject({ state: 'PREFLIGHT', instanceId: newInstanceId });
+        newChild.sendReady(newInstanceId);
+        await expect(restarting).resolves.toMatchObject({ state: 'READY', instanceId: newInstanceId });
+    });
+
     it('fails a handshake timeout without discarding ownership or replacing the child', async () => {
         const { supervisor, children, fork } = createHarness(20);
         await expect(supervisor.start()).rejects.toMatchObject({ code: 'WORKER_READY_TIMEOUT' });

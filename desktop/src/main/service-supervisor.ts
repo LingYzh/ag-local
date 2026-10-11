@@ -41,6 +41,7 @@ interface ManagedChild {
     shutdownAcknowledged: boolean;
     exited: boolean;
     exitCode: number | null;
+    failure: FoundationFault | null;
     readyTimer: ReturnType<typeof setTimeout> | null;
     pending: Map<string, PendingRequest>;
     readyPromise: Promise<void>;
@@ -88,6 +89,10 @@ function isReadyMessage(value: unknown, instanceId: string): value is WorkerRead
 interface ParsedWorkerResponse {
     requestId: string;
     result: { ok: true; value: unknown } | { ok: false; error: FoundationFault };
+}
+
+function instanceFailure(record: ManagedChild): FoundationFault | null {
+    return record.failure;
 }
 
 function isFoundationFault(value: unknown): value is FoundationFault {
@@ -269,6 +274,7 @@ export class ServiceSupervisor {
             shutdownAcknowledged: false,
             exited: false,
             exitCode: null,
+            failure: null,
             readyTimer: null,
             pending: new Map(),
             readyPromise,
@@ -312,8 +318,14 @@ export class ServiceSupervisor {
     private async stopInternal(): Promise<RuntimeStatus> {
         const record = this.child;
         if (!record) {
+            if (this.state === 'FAILED' && this.lastError) {
+                throw makeError(this.lastError.code, this.lastError.detail);
+            }
             this.state = 'STOPPED';
             return this.getStatus();
+        }
+        if (record.failure) {
+            throw makeError(record.failure.code, record.failure.detail);
         }
         if (!record.ready || (this.state !== 'READY' && this.state !== 'FAILED')) {
             throw makeError('WORKER_IDENTITY_UNVERIFIED', 'The owned worker has no verified identity and cannot receive control commands');
@@ -325,6 +337,10 @@ export class ServiceSupervisor {
             await this.sendRequest<RuntimeStatus>(record, 'shutdown', undefined, true);
             record.shutdownAcknowledged = true;
             const code = await this.waitForExit(record);
+            const failureAfterExit = instanceFailure(record);
+            if (failureAfterExit) {
+                throw makeError(failureAfterExit.code, failureAfterExit.detail);
+            }
             if (code !== 0) {
                 throw makeError('WORKER_EXIT_FAILED', `Worker exited with code ${code}`);
             }
@@ -335,9 +351,10 @@ export class ServiceSupervisor {
             }
             return this.getStatus();
         } catch (error) {
-            const issue = errorFault(error, 'WORKER_STOP_FAILED');
+            const issue = record.failure ?? errorFault(error, 'WORKER_STOP_FAILED');
             if (this.child === record && !record.exited) this.failRecord(record, issue);
-            throw makeError(issue.code, issue.detail);
+            const firstFailure = record.failure ?? issue;
+            throw makeError(firstFailure.code, firstFailure.detail);
         }
     }
 
@@ -449,13 +466,18 @@ export class ServiceSupervisor {
         const issue = record.expectedExit && record.shutdownAcknowledged && code === 0
             ? null
             : { code: 'WORKER_EXITED', detail: `Worker exited unexpectedly with code ${code}` };
-        this.rejectPending(record, makeError(issue?.code ?? 'WORKER_EXITED', issue?.detail ?? 'Worker exited'));
+        if (issue && !record.failure) record.failure = { ...issue };
+        const exitFailure = record.failure ?? issue;
+        this.rejectPending(record, makeError(
+            exitFailure?.code ?? 'WORKER_EXITED',
+            exitFailure?.detail ?? 'Worker exited'
+        ));
 
         if (this.child !== record) return;
         this.child = null;
-        if (issue) {
+        if (record.failure) {
             this.state = 'FAILED';
-            this.lastError = issue;
+            this.lastError = { ...record.failure };
         } else {
             this.state = 'STOPPED';
             this.lastError = null;
@@ -468,7 +490,8 @@ export class ServiceSupervisor {
             const timer = setTimeout(() => {
                 const issue = { code: 'WORKER_EXIT_TIMEOUT', detail: 'Worker acknowledged shutdown but did not exit in time' };
                 this.failRecord(record, issue);
-                reject(makeError(issue.code, issue.detail));
+                const firstFailure = record.failure ?? issue;
+                reject(makeError(firstFailure.code, firstFailure.detail));
             }, this.timeoutMs);
             void record.exitPromise.then(code => {
                 clearTimeout(timer);
@@ -478,11 +501,13 @@ export class ServiceSupervisor {
     }
 
     private failRecord(record: ManagedChild, issue: FoundationFault): void {
+        if (record.exited) return;
+        if (!record.failure) record.failure = { ...issue };
         if (this.child === record && this.state !== 'STOPPED') {
             this.state = 'FAILED';
-            this.lastError = { ...issue };
+            this.lastError = { ...record.failure };
         }
-        this.rejectPending(record, makeError(issue.code, issue.detail));
+        this.rejectPending(record, makeError(record.failure.code, record.failure.detail));
     }
 
     private rejectPending(record: ManagedChild, error: Error): void {

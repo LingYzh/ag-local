@@ -1,0 +1,302 @@
+{
+  "complete": true,
+  "execution_sources_sha256": {
+    "tools/evidence/analyze_official_startup.py": "ff9e2518ed3b044cf5b2c36bcce97e4e173e96803d3a0534f610d5b087dd5166",
+    "tools/evidence/current_schema_match.py": "06a761169ac74698ae3b180ead46e663c1234d1fa5126ae31731df0865136d4b",
+    "tools/validation/provenance.py": "7291de2c2a7e603c2af0f860dd1364b60394c2437d173ed146391ef4022142b6"
+  },
+  "format": "ag-local-offline-evidence-v1",
+  "incomplete_reasons": {},
+  "inputs": {
+    "capture_expected_sha256": "e1218b5dcff6d89578fcc7f8d47df0932f3c02f37d207fb0a6a43b3d0f8449db",
+    "capture_hash_verified": true,
+    "capture_sha256": "e1218b5dcff6d89578fcc7f8d47df0932f3c02f37d207fb0a6a43b3d0f8449db",
+    "capture_sha256_stable_after_scan": true,
+    "capture_size_bytes": 131622688,
+    "schema_binding": {
+      "ambiguous_command_count": 0,
+      "defaults_used_for_matching": false,
+      "enum_domain_validation": "not-applicable-no-enum-fields-in-current-ir",
+      "enum_field_count": 0,
+      "field_count": 6889,
+      "json_depth_limit": 128,
+      "load_status": "validated",
+      "mapped_command_count": 2317,
+      "message_count": 3061,
+      "packed_option_metadata": "absent; repeated packable fields accept valid packed or unpacked wire forms",
+      "protobuf_field_limit_per_frame": 100000,
+      "protobuf_input_limit_per_frame": 1048576,
+      "protobuf_recursion_depth_limit": 32,
+      "required_presence_semantics": "singular embedded-message occurrences merge; repeated message instances are independent",
+      "scalar_value_domains_checked": false,
+      "schema_byte_limit": 33554432,
+      "sha256": "917010c2bc0cf4e4bfb21dfdf66c77128cff61d9a47c848a30f0a1c1d4a842b0",
+      "size_bytes": 26504729
+    },
+    "schema_expected_sha256": "917010c2bc0cf4e4bfb21dfdf66c77128cff61d9a47c848a30f0a1c1d4a842b0",
+    "schema_hash_verified": true,
+    "schema_sha256": "917010c2bc0cf4e4bfb21dfdf66c77128cff61d9a47c848a30f0a1c1d4a842b0",
+    "schema_sha256_stable_after_scan": true
+  },
+  "method": {
+    "auxiliary_http_scope": "Cleartext HTTP-hinted streams are auxiliary diagnostics; their integrity and selection limits are reported separately and do not block target protocol validation.",
+    "completeness_scope": "passed/complete cover current-schema validation only for target protocol flows selected from bounded mapped-frame prefixes, plus input/source integrity. They do not assert that every TCP flow or application message in the capture was identified.",
+    "dependencies_profile": "Analyzer uses Python standard library only; provenance records runtime and lock hashes plus installed metadata versions, but does not verify installed packages against the lock.",
+    "file_and_interface_limits": {
+      "block_error_examples": 64,
+      "capture_bytes": 536870912,
+      "interface_count": 256,
+      "pcap_block_bytes": 16777216
+    },
+    "frame_and_compression_limits": {
+      "compression_selection": "Downlink flag 0 selects raw; flag 1 requires bounded complete zlib; unknown flags do not select a schema payload. Uplink has no observed explicit compression flag, so raw bytes are used for protobuf/schema and 10042 version parsing; bounded zlib-signature checks are diagnostic only and never select inflated bytes.",
+      "frame_bytes": 4194304,
+      "inflate_bytes_per_flow": 4194304,
+      "inflate_ratio": 64,
+      "protobuf_bytes": 1048576
+    },
+    "offline_only": true,
+    "payloads_or_field_values_emitted": false,
+    "privacy_allowlist": [
+      "counts",
+      "status codes",
+      "hashes",
+      "bounded parser reasons",
+      "schema field numbers"
+    ],
+    "synthetic_tests": {
+      "executed_by_capture_command": false,
+      "reason": "Run the isolated repository Python test runner separately; capture analysis does not execute test suites.",
+      "status": "not-run"
+    },
+    "tcp_limits": {
+      "aggregate_reassembly_bytes": 67108864,
+      "duplicate_cache_entries": 250000,
+      "duplicate_rule": "cross-interface only; same flow direction, sequence, acknowledgement, flags, payload length and BLAKE2s-96 payload digest within the bounded timestamp window",
+      "duplicate_window_ns": 2000000,
+      "flow_count": 100000,
+      "per_flow_reassembly_bytes": 33554432,
+      "probe_bytes_per_segment": 64,
+      "probe_prefix_bytes_per_direction": 512,
+      "probe_segments_per_direction": 8,
+      "probe_segments_retained": 500,
+      "probe_segments_skipped": 45103
+    },
+    "tcp_prefix_selection": "At most eight SYN-origin TCP payload segments per direction, retaining at most 64 bytes from each and assembling only a contiguous 512-byte prefix; conflicting probe overlaps are rejected.",
+    "tls_scope": "TLS-hinted flows are counted only; payloads are not decrypted or validated."
+  },
+  "passed": true,
+  "provenance": {
+    "baseline_commit": "7aea8f08f82b2853156ced43db9831f561e0caf0",
+    "environment": {
+      "architecture": "AMD64",
+      "dependency_lock_sha256": "d38f3b944957676e00b57a817aded2d9009b88c93ef6f9b4998b60b0bc3919cb",
+      "implementation": "CPython",
+      "installed_key_package_versions": {
+        "UnityPy": "1.25.2",
+        "lz4": "4.4.5",
+        "pip": "26.1.2"
+      },
+      "interpreter_sha256": "199ce15a9f0d4f9522edba59338e4879d28cf61f88e377b8164bcb716275ed22",
+      "isolated": true,
+      "os": "Windows",
+      "os_release": "11",
+      "python": "3.14.6",
+      "runtime_distribution_sha256": "75afa83f93b284d19040e24bc440ab741c09582c0d5310504d607a4e08c3dbaf"
+    },
+    "format_version": 1,
+    "privacy": "Repository-relative source paths and allowlisted metadata only; no credentials, payloads or environment values.",
+    "source_sha256": {
+      "tools/evidence/analyze_official_startup.py": "ff9e2518ed3b044cf5b2c36bcce97e4e173e96803d3a0534f610d5b087dd5166",
+      "tools/evidence/current_schema_match.py": "06a761169ac74698ae3b180ead46e663c1234d1fa5126ae31731df0865136d4b",
+      "tools/validation/provenance.py": "7291de2c2a7e603c2af0f860dd1364b60394c2437d173ed146391ef4022142b6"
+    },
+    "workspace_dirty": true
+  },
+  "results": {
+    "auxiliary_http_stream_integrity": {
+      "captured_contiguous_bytes": 28282,
+      "conflicting_overlap_bytes": 4,
+      "directions_with_reassembled_segments": 20,
+      "exact_overlap_bytes": 0,
+      "flow_selection": {
+        "http_hint_flows": 10,
+        "not_reassembled_flows_by_reason": {},
+        "reassembled_flows": 10
+      },
+      "fragmented_captured_bytes": 0,
+      "fragmented_packets": 0,
+      "gap_missing_bytes": 0,
+      "issue_counts": {
+        "conflicting-overlap": 4,
+        "session-close-not-observed": 10
+      },
+      "negative_offset_bytes": 0,
+      "out_of_bounds_bytes": 0,
+      "post_gap_segment_bytes": 0,
+      "reassembly_cap_skipped_bytes": 0,
+      "reassembly_cap_skipped_bytes_by_reason": {},
+      "scope": "diagnostic-only; does-not-affect-target-protocol-pass",
+      "selected_stream_directions": 20,
+      "session_close_observed_directions": 10,
+      "session_close_unobserved_directions": 10,
+      "truncated_declared_bytes": 0,
+      "truncated_packets": 0,
+      "unparsed_bytes_total": 0
+    },
+    "pcap": {
+      "block_counts": {
+        "EPB": 61616,
+        "IDB": 3,
+        "ISB": 3,
+        "SHB": 1
+      },
+      "block_rejection_reasons": {},
+      "block_scan_complete": true,
+      "bytes_scanned": 131622688,
+      "capture_truncated_records": 0,
+      "file_stable_during_two_pass_scan": true,
+      "interface_count": 3,
+      "malformed_option_lists": 0,
+      "packet_records": 61616,
+      "section_count": 1,
+      "unknown_timestamp_records": 0
+    },
+    "protocol": {
+      "compression_probe_relations": {
+        "flag-0-with-zlib-signature-candidate": 6,
+        "flag-0-without-zlib-signature-candidate": 627,
+        "flag-1-with-zlib-signature-candidate": 27,
+        "unflagged-no-zlib-signature": 54
+      },
+      "deduplicated_direction_frame_counts": {
+        "downstream": 220,
+        "total": 238,
+        "upstream": 18
+      },
+      "deduplicated_downlink_compress_flag_1_frames": 9,
+      "deduplicated_downlink_compress_flag_1_zlib_inflate_successes": 9,
+      "deduplicated_schema_match_totals": {
+        "deduplicated_downlink_flag_1_frames": 9,
+        "deduplicated_downlink_flag_1_zlib_inflate_successes": 9,
+        "deduplicated_downstream_frames": 220,
+        "deduplicated_upstream_frames": 18,
+        "frames_with_singular_message_merges": 0,
+        "incomplete_mapped_events": 0,
+        "mapped_events": 238,
+        "message_rows": 180,
+        "protocol_events": 238,
+        "required_omission_events": 0,
+        "singular_message_merge_extra_occurrences": 0,
+        "singular_message_merge_sites": 0,
+        "unknown_field_events": 0,
+        "wire_match_events": 238,
+        "wire_mismatch_events": 0
+      },
+      "downstream_frames_observed": 660,
+      "observed_compress_flag_1_downlink_inflate_successes": 27,
+      "observed_schema_match_statuses": {
+        "wire-match": 714
+      },
+      "protobuf_wire_invalid_bodies": 0,
+      "protobuf_wire_valid_bodies": 714,
+      "schema_match_trust": {
+        "status": "trusted",
+        "trusted_wire_match_events": 238
+      },
+      "upstream_a_frames_observed": 54,
+      "upstream_b_diagnostic_frames_observed": 54,
+      "zlib_inflate_diagnostic_successes_across_selected_flow_views": 27,
+      "zlib_signature_candidates": 33
+    },
+    "selected_stream_integrity": {
+      "captured_contiguous_bytes": 339216,
+      "conflicting_overlap_bytes": 0,
+      "directions_with_reassembled_segments": 12,
+      "exact_overlap_bytes": 13,
+      "fragmented_captured_bytes": 0,
+      "fragmented_packets": 0,
+      "frame_parser_tail_bytes": 0,
+      "framing_rejection_reasons": {},
+      "gap_missing_bytes": 0,
+      "issue_counts": {},
+      "negative_offset_bytes": 0,
+      "out_of_bounds_bytes": 0,
+      "post_gap_segment_bytes": 0,
+      "primary_protocol_frames_observed": 714,
+      "reassembly_cap_skipped_bytes": 0,
+      "scope": "selected-target-protocol-flows-only",
+      "selected_stream_directions": 12,
+      "session_close_observed_directions": 6,
+      "session_close_unobserved_directions": 6,
+      "truncated_declared_bytes": 0,
+      "truncated_packets": 0,
+      "unparsed_bytes_total": 0
+    },
+    "tcp": {
+      "all_rejection_and_drop_reasons": {
+        "first_pass": {
+          "not-ip": 31,
+          "not-tcp": 126
+        },
+        "first_pass_flow_limit": 0,
+        "first_pass_payload_conditions": {
+          "capture_truncated_declared_payload_bytes": 0,
+          "capture_truncated_payload_packets": 0,
+          "first_ip_fragment_captured_payload_bytes": 0,
+          "first_ip_fragment_packets": 0
+        },
+        "first_pass_scan_errors": {},
+        "flow_selection_reasons": {
+          "initiator-direction-unobserved": 102,
+          "mapped-client-frame-prefix": 6,
+          "no-mapped-frame-prefix": 25,
+          "not-probed": 18,
+          "selected-http": 10,
+          "tls-count-only": 160
+        },
+        "protocol_candidate_not_reassembled_reasons": {},
+        "protocol_probe_segment_skips": {
+          "protocol-probe-prefix-cap": 45037,
+          "protocol-probe-segment-count-cap": 66
+        },
+        "reassembly_cap_skipped_bytes_by_scope": {
+          "auxiliary_http": {},
+          "target_protocol": {}
+        },
+        "selected_pass": {
+          "not-ip": 31,
+          "not-tcp": 126
+        },
+        "selected_pass_scan_errors": {}
+      },
+      "captured_payload_bytes": 126539478,
+      "cross_interface_duplicates_suppressed_first_pass": 0,
+      "cross_interface_duplicates_suppressed_selected_pass": 0,
+      "declared_payload_bytes": 126539478,
+      "flow_count": 321,
+      "flow_hints": {
+        "http-cleartext": 10,
+        "mapped-protocol-candidate": 6,
+        "opaque-tcp-candidate": 127,
+        "tls-count-only": 160,
+        "unknown": 18
+      },
+      "flow_selection_reasons": {
+        "initiator-direction-unobserved": 102,
+        "mapped-client-frame-prefix": 6,
+        "no-mapped-frame-prefix": 25,
+        "not-probed": 18,
+        "selected-http": 10,
+        "tls-count-only": 160
+      },
+      "payload_packets": 47591,
+      "protocol_probe_reasons": {
+        "initiator-direction-unobserved": 102,
+        "mapped-client-frame-prefix": 6,
+        "no-mapped-frame-prefix": 25,
+        "not-probed": 170
+      }
+    }
+  }
+}

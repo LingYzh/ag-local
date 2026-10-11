@@ -1,0 +1,14 @@
+{
+  "generated_utc": "2026-10-11T13:50:01.5556437Z",
+  "installer": "tools/python/verify-environment.ps1",
+  "installer_sha256": "1a873aacc346089e2ab534f5d25b01bb8110449e497308af513d463f25e5f2fd",
+  "dependency_lock_sha256": "d38f3b944957676e00b57a817aded2d9009b88c93ef6f9b4998b60b0bc3919cb",
+  "wheelhouse_copy": "qa/python-environment/h02-tampered-wheelhouse-20261011",
+  "wheel": "archspec-0.2.6-py3-none-any.whl",
+  "locked_wheel_sha256": "22463371fe8e9fa92fa144bf320cb445373a99f2ca6a5914c890e0c0b7816f8f",
+  "tampered_wheel_sha256": "66d1235f1f27a71163ef59db7fd54a933069938ff8e8d2bdbba435130f320e48",
+  "expected_result": "Reject before target creation.",
+  "observed_exit_code": 1,
+  "observed_diagnostic": "Wheel hash is not present in the dependency lock.",
+  "negative_target_created": false
+}

@@ -1,0 +1,328 @@
+{
+  "synthetic_only": true,
+  "passed": true,
+  "expected_result_observed": true,
+  "start_time_ms": 1791725431055,
+  "run": 55,
+  "passed_count": 54,
+  "failed_count": 0,
+  "skipped_count": 1,
+  "tests": [
+    {
+      "test": "inventoryClient returns a read-only G0 fingerprint and matches the canonical index by content and identity",
+      "result": "passed"
+    },
+    {
+      "test": "inventoryClient reports other version candidates without replacing the content-and-identity match",
+      "result": "passed"
+    },
+    {
+      "test": "inventoryClient reports same-identity candidates with different content as a conflict",
+      "result": "passed"
+    },
+    {
+      "test": "inventoryClient rejects malformed md5 entries",
+      "result": "passed"
+    },
+    {
+      "test": "inventoryClient rejects negative size entries",
+      "result": "passed"
+    },
+    {
+      "test": "inventoryClient rejects out-of-bound size entries",
+      "result": "passed"
+    },
+    {
+      "test": "inventoryClient rejects an index with no scripts64 definition",
+      "result": "passed"
+    },
+    {
+      "test": "inventoryClient rejects path traversal in a logical asset name",
+      "result": "passed"
+    },
+    {
+      "test": "inventoryClient rejects duplicate logical names using Windows case-insensitive comparison",
+      "result": "passed"
+    },
+    {
+      "test": "inventoryClient rejects non-string asset entries and duplicate JSON object keys",
+      "result": "passed"
+    },
+    {
+      "test": "inventoryClient rejects a script file whose size does not match the index",
+      "result": "passed"
+    },
+    {
+      "test": "inventoryClient rejects missing script resources instead of searching another directory",
+      "result": "passed"
+    },
+    {
+      "test": "inventoryClient rejects a scripts path that traverses a directory link",
+      "result": "passed"
+    },
+    {
+      "test": "inspectBundle keeps observed and incomplete bundles diagnostic only",
+      "result": "passed"
+    },
+    {
+      "test": "inspectBundle rejects placeholder identity values outside observed state",
+      "result": "passed"
+    },
+    {
+      "test": "inspectBundle reports a fully hash-verified closure while keeping businessReady false",
+      "result": "passed"
+    },
+    {
+      "test": "inspectBundle keeps an imported tuple incomplete when required roles are missing",
+      "result": "passed"
+    },
+    {
+      "test": "inspectBundle rejects a bad artifact hash with a stable error code",
+      "result": "passed"
+    },
+    {
+      "test": "inspectBundle rejects unsafe artifact path ../outside.bin",
+      "result": "passed"
+    },
+    {
+      "test": "inspectBundle rejects unsafe artifact path C:\\outside.bin",
+      "result": "passed"
+    },
+    {
+      "test": "inspectBundle rejects unsafe artifact path \\\\server\\share\\file.bin",
+      "result": "passed"
+    },
+    {
+      "test": "inspectBundle rejects unsafe artifact path dir\\..\\file.bin",
+      "result": "passed"
+    },
+    {
+      "test": "inspectBundle rejects unsafe artifact path file.txt:stream",
+      "result": "passed"
+    },
+    {
+      "test": "inspectBundle rejects unsafe artifact path CON.txt",
+      "result": "passed"
+    },
+    {
+      "test": "inspectBundle rejects unsafe artifact path trailing.",
+      "result": "passed"
+    },
+    {
+      "test": "inspectBundle rejects symlinks that resolve outside the artifact root",
+      "result": "skipped"
+    },
+    {
+      "test": "inspectBundle rejects directory junction escape without requiring file symlink privileges",
+      "result": "passed"
+    },
+    {
+      "test": "schema registry validation rejects normalized message-name conflicts",
+      "result": "passed"
+    },
+    {
+      "test": "schema registry validation rejects duplicate field numbers and names",
+      "result": "passed"
+    },
+    {
+      "test": "schema registry validation enforces protobuf field-number boundaries",
+      "result": "passed"
+    },
+    {
+      "test": "schema registry validation rejects missing or unresolved message refs and unknown scalar types",
+      "result": "passed"
+    },
+    {
+      "test": "schema registry validation accepts zero-field messages and rejects duplicate JSON keys",
+      "result": "passed"
+    },
+    {
+      "test": "schema registry validation keeps namespace-qualified refs and enum metadata in a frozen registry",
+      "result": "passed"
+    },
+    {
+      "test": "ServiceSupervisor lifecycle accepts only a matching diagnostics-ready handshake",
+      "result": "passed"
+    },
+    {
+      "test": "ServiceSupervisor lifecycle shares concurrent start calls and forks once",
+      "result": "passed"
+    },
+    {
+      "test": "ServiceSupervisor lifecycle waits for an in-flight start before stopping and rejects new starts while stopping",
+      "result": "passed"
+    },
+    {
+      "test": "ServiceSupervisor lifecycle waits for the shutdown response and owned child exit",
+      "result": "passed"
+    },
+    {
+      "test": "ServiceSupervisor lifecycle rejects a forged shutdown success payload without treating it as an acknowledgement",
+      "result": "passed"
+    },
+    {
+      "test": "ServiceSupervisor lifecycle rejects a malformed bundle report from the worker",
+      "result": "passed"
+    },
+    {
+      "test": "ServiceSupervisor lifecycle rejects in-flight requests and reports a failed state after an unexpected exit",
+      "result": "passed"
+    },
+    {
+      "test": "ServiceSupervisor lifecycle retains a timed-out child and ignores messages from its old instance after restart",
+      "result": "passed"
+    },
+    {
+      "test": "ServiceSupervisor lifecycle preserves an acknowledged shutdown timeout through a retry and late exit, then starts a new instance",
+      "result": "passed"
+    },
+    {
+      "test": "ServiceSupervisor lifecycle keeps the first control fault when an unacknowledged instance exits with code 0",
+      "result": "passed"
+    },
+    {
+      "test": "ServiceSupervisor lifecycle keeps the first control fault when an unacknowledged instance exits with code 9",
+      "result": "passed"
+    },
+    {
+      "test": "ServiceSupervisor lifecycle fails a handshake timeout without discarding ownership or replacing the child",
+      "result": "passed"
+    },
+    {
+      "test": "private Python compatibility lifecycle checks the tuple, proves identity repeatedly and requires acknowledgement plus exit",
+      "result": "passed"
+    },
+    {
+      "test": "private Python compatibility lifecycle rejects an observed tuple before creating a child",
+      "result": "passed"
+    },
+    {
+      "test": "private Python compatibility lifecycle rejects a changed runtime fingerprint before creating a child",
+      "result": "passed"
+    },
+    {
+      "test": "private Python compatibility lifecycle rejects a forged handshake and cooperatively closes its own pipe",
+      "result": "passed"
+    },
+    {
+      "test": "private Python compatibility lifecycle rejects a business-ready handshake and cooperatively closes its own pipe",
+      "result": "passed"
+    },
+    {
+      "test": "private Python compatibility lifecycle keeps a timed-out shutdown failed until close, then starts a new UUID cleanly",
+      "result": "passed"
+    },
+    {
+      "test": "private Python compatibility lifecycle serializes READY status checks and ignores late status and diagnostics after timeout",
+      "result": "passed"
+    },
+    {
+      "test": "desktop trust boundary accepts only the bundled main frame, preserving hash navigation",
+      "result": "passed"
+    },
+    {
+      "test": "desktop trust boundary denies external and other local resources",
+      "result": "passed"
+    },
+    {
+      "test": "desktop trust boundary rejects wrong instances, unknown commands and arbitrary extra fields",
+      "result": "passed"
+    }
+  ],
+  "node": "24.19.0",
+  "npm": "11.17.0",
+  "clean_npm_ci": true,
+  "raw_report_sha256": "ceb7f5eb81dc486e60fafcdc28208f178bb9667c17d7021a1dacf393e2dee18a",
+  "type_check_passed": true,
+  "provenance": {
+    "format_version": 1,
+    "baseline_commit": "7aea8f08f82b2853156ced43db9831f561e0caf0",
+    "workspace_dirty": true,
+    "source_sha256": {
+      "desktop/package-lock.json": "622443c0f5bd7e43cf134e10dc8f01ef7d5c927bc27d9e557dbbaf9f7e848877",
+      "desktop/package.json": "0039a31a4e535891577a2d1cc5f18b940cdeae6e8f15c4b3c0fd318a0ea33488",
+      "desktop/scripts/build.mjs": "4eb7f503409ba011e6c1064cd1055bb14b7f43a54e558425bbd95d410963c821",
+      "desktop/scripts/compatibility-check.mjs": "c0b35756c1788e50c9b7447265bcb695f5f9571b2f22a762eca2167af119a91a",
+      "desktop/scripts/inventory-client.mjs": "39c5c356694e09f5a702ad7154cb58778a67b773caa5b845c821678a3a9d51d9",
+      "desktop/scripts/launch.mjs": "ad01b84f358d5b7c16102649a892b47c61ea3525f9c2aeef878b0bd97a17b6d8",
+      "desktop/scripts/package.mjs": "0a1edf77ee63a89df29f481e81bb151df2c5e3b80926b0dbfcd548257f295ca8",
+      "desktop/scripts/python-smoke.mjs": "552653a00ea94d64e7952e4421578e9971dee47f425b4fb09ff5375b876f28e7",
+      "desktop/scripts/ui-smoke.mjs": "b5eb4fb38e1388c3bb628b975182ae57400b2bb2be1874d51ad026a754ee956d",
+      "desktop/src/main/compatibility-cli.ts": "8c6991a8f884d34af2f1c8e42d60630345d7973536284b7cea346878a1cae67b",
+      "desktop/src/main/main.ts": "fec635e4133c86672de60ee27b41f443d581f9a85867bc8f06b95344df3d8648",
+      "desktop/src/main/python-supervisor.ts": "de3eee21c9236ca3f9b0eb57e644328b9ad724e3b5a5b8352b7eb92d2c4a2f99",
+      "desktop/src/main/security.ts": "640220aba36559c37df4bf6600444b5ff1fd8341b5755b3c866600592ef5defa",
+      "desktop/src/main/service-supervisor.ts": "2a7cf432bd0a56a05ca4c874d904873488dc4a3990880e88f67ddeb3761424c7",
+      "desktop/src/main/smoke-fixtures.ts": "74bbd08f67f3c4cbe9b67c2d3a46ed59df8b13bba47b3c3afe23c5637c9a92a0",
+      "desktop/src/main/smoke.ts": "2331bcc562e4b4d64839f2552f6b0c34807c73e436f56b6f2427f0952783de0e",
+      "desktop/src/preload/preload.ts": "0193a506f98674db5bf221eee6463e89e878aa5e87be00a50f63fb43f2fd8f1c",
+      "desktop/src/renderer/api/desktop.ts": "e66b23c90999f5fe2aaf60630aa3c3c1ab211222c6a498db5eda38ebb581193b",
+      "desktop/src/renderer/App.vue": "7280f80358b87fea4e1eb052d62b89b59124b2d3b04623a7cda0f3923d5321db",
+      "desktop/src/renderer/demo/ComponentDemo.vue": "36b03661bc0cbef4065fe424c0c9fa4c7a1f29305335ad2afebd252656e93f4d",
+      "desktop/src/renderer/env.d.ts": "306a9d09085c932bd73bb74056efc84489d622ee9b3b8199c43fdd9d70fa4bb6",
+      "desktop/src/renderer/FoundationView.vue": "debc669cd12a7b8ac4cd7601b9638962ad033cf9e1f9b55cbc625318afee3d5b",
+      "desktop/src/renderer/main.ts": "15a0773bb7d98bbc1eb28ca8dbb7a7e574033d5c1b2afb90a91b11cd6d2ccdb1",
+      "desktop/src/renderer/ui/ApBadge.vue": "fc5d61299079f6daa87af7e16535592fb2cf90ecba8ba3da9318932e3ee09753",
+      "desktop/src/renderer/ui/ApButton.vue": "d694f644d872b32349eea698030c24c15d12f78f7680cdfdaf0f94187afaec9d",
+      "desktop/src/renderer/ui/ApCard.vue": "efdc94cad42b7aeba537cf316bacc2e05cc0115e4d345aedcf1c322539af36f1",
+      "desktop/src/renderer/ui/ApEmptyState.vue": "e73856b0a6179d6585abc89434b12dfcb2c5a1fe32081f25a37ec9b128bafad5",
+      "desktop/src/renderer/ui/ApInput.vue": "f3fff58a7e083d11a50f32b301a48ce08fd53ead413ce38fc26df435f7cbc221",
+      "desktop/src/renderer/ui/ApNotice.vue": "5ac51547eb3807e3054a7ee584b46d1b65a0a92cb6ef1788ae4726ea11b84d86",
+      "desktop/src/renderer/ui/ApShell.vue": "43ee1657d9d23c5f7fa2b1a704e60ebed42c7881a57733b9219607e1836b32f7",
+      "desktop/src/renderer/ui/ApTabs.vue": "07033c15dcb8f33839f5962218f43cf432e06f7ed969724a5858c93e7564e967",
+      "desktop/src/renderer/ui/index.ts": "6b65aac4b664360b1e0283c839e681685510aca552c4650fdd51d9ffba351c61",
+      "desktop/src/renderer/ui/vuetify.ts": "7dfcdd41f079309e648052e8eed7a20d88be79ad886c1c95aae606f2215372f6",
+      "desktop/src/service/compatibility/errors.ts": "296aab8e3e53ea4128b3b6897f696fb2dc1162e4794443df830e520e117dc7af",
+      "desktop/src/service/compatibility/index.ts": "790b933c2da1ca9cf2e05307cd5cb656b16a7760311bfaf5f7f068f6b78db8fa",
+      "desktop/src/service/compatibility/json.ts": "3f8dd5b0e77e163f77a55c2481c0e7e7b6838654704c97e8de706b529fadda69",
+      "desktop/src/service/compatibility/manifest.ts": "1186790f24b65fb76cc65df54445652147e29fe6459a731f1e9be40faeb01034",
+      "desktop/src/service/compatibility/schema.ts": "569645da1f3605bf9e1dbecf5c2b571eb414d2505fa131aeec137373f207579b",
+      "desktop/src/service/import/client-inventory.ts": "6f83369c756fbf66c365a5d571b2f696de1809ae0017565ae75b570bbf3b94a7",
+      "desktop/src/service/import/inventory-cli.ts": "9a38681e32f1d5a9ea69bf423a829741fffac09108d1f44d180d4cf5143e48d5",
+      "desktop/src/service/worker.ts": "bb8a77a5c44405131ddb4d515669555352da5173f942028ee62098d9c1be9812",
+      "desktop/src/shared/client-contracts.ts": "d7b1d6e25eeb16731b0b29edce6e373b9cef1dfcca374b47da24c00289ba52f7",
+      "desktop/src/shared/client-validation.ts": "b675951e6890aae28d82b4a88836308a0bec5ed5060cfc5616709c55249261f3",
+      "desktop/src/shared/contracts.ts": "5168c9759c6133c24a5878dac77ff9749f589f7bb88d8135f877052922537d7b",
+      "desktop/src/shared/python-contracts.ts": "8bab986163adfff9432f4808dc8f6e3c080fa88d3d9b81b79f788a4dad07d9c5",
+      "desktop/src/shared/validation.ts": "7edc5551f0d55837e7fc7f53acc8a7bdd13c07acae37dcc834ba6638748496df",
+      "desktop/tests/client-inventory.test.ts": "7bceff95e362b9c3946514466783e6caf218891ea372ff5b1d78abdfbcda7b9c",
+      "desktop/tests/compatibility.test.ts": "8a75bce36b12b62a32d8275ea665be02aefe42aee2ab7753f78d9c22b3839631",
+      "desktop/tests/lifecycle.test.ts": "5847911326e228f51533df7e5a49b977254b159a72717567948a2ffc3198e9f7",
+      "desktop/tests/python-supervisor.test.ts": "d18d09764f63e8ea7cbcd0f46163f55dc8da244676ebf645c335245667c5aaf0",
+      "desktop/tests/security.test.ts": "d8f70613039c9c11c67fb1383cfbfeb16745498117c5c87c35389c57407d3ae8",
+      "desktop/tsconfig.node.json": "c79bcae26fc7cc666cd99715a4cff6e57cbc00efb0d4642b05d36bd80dc53ea5",
+      "desktop/tsconfig.renderer.json": "e02567eccd590059481fc05ddb08f56da4181828c6bf8bf119e609259df854be",
+      "desktop/vite.config.ts": "8e068426db10044125d22e322454b42e32981ca7273fd7233e488582eb40d8b9",
+      "desktop/vitest.config.ts": "9c7b1b4007bbd1f89386dec464b4db454a7b1bb0de02c744e8e3a87b83bdf66d",
+      "tests/controlled_service/test_controlled_service.py": "cb93eae0c588fd5fe9923d7cd62ddfece460453868bae44b9e7138549336de3b",
+      "tests/network/test_framing.py": "9211e7abd59c5a1e54541d643cac75fcb14093989b26580fb29c8fbd2334acb8",
+      "tests/static_protocol/test_extract.py": "8d35c472fee710dea2c5b89d8c1175e8830413a93e157166d34d0b0c4769e463",
+      "tests/static_protocol/test_static_protocol.py": "0c35f9f6c485d1c508ff8f1f08125d1c3ca21e2e25539d33dac56c3178db5d58",
+      "tools/validation/bind_desktop_report.py": "6f0a56d4ab392d1111d795628850c3d3e2f0e12f2c0592893a52b4922fc9848e",
+      "tools/validation/provenance.py": "2405f07ac55f308e90ef9f213411c37c832f34691707dcef5bda39698e51fdca",
+      "tools/validation/run_python_tests.py": "4484d711a27b990e834f0b076da9ca63a9f5b53a8bffccc66d69a2f1c30cf44d",
+      "v5_server/bootstrap/__init__.py": "a38381c7e7bf07b543335f67630ea8a5b059ed2af3028d7a600b2d3c80e19fa1",
+      "v5_server/bootstrap/controlled_service.py": "718c548b0f48bcab231050f9e9e0a5515feff0da687ee975e4c2e3f68ecd6b4d",
+      "v5_server/network/__init__.py": "cb36efbdf90154e9641428a19856c1e4c8794e49a21f77fd95ece07fba75ee37",
+      "v5_server/network/framing.py": "bdd8eabbc9b0c395f9f227b9fd19a48c038ae2c697e48d3cdc3343db2725d3dd",
+      "v5_server/tools/static_protocol/__init__.py": "fb14b76de212d386a29efdebf8f3d32af859344ccb1831fd3d58bc0614fe731c",
+      "v5_server/tools/static_protocol/bundle.py": "58c02acf9d3197340118233b068f95dfe011545a91a7da109b03247407e9c32e",
+      "v5_server/tools/static_protocol/bytecode.py": "61a2ad5b3ae3d5c3a7db7877e303b3218add5277fa188360602e86f004d5ec67",
+      "v5_server/tools/static_protocol/cli.py": "c1bbd6a8230b932b07cdb3c2e3bdcf1b7288fba655d782677e925669b46496ad",
+      "v5_server/tools/static_protocol/extract.py": "29ec71c3ef32e33d8889f9d906d628cc32177716533a26eaa194ca280ce2a0a4",
+      "v5_server/tools/static_protocol/schema_ir.py": "ef4638df639bd696775db30acd7e6a27da2abd1c4b4707d0763392aec8a1962c",
+      "v5_server/tools/static_protocol/static_vm.py": "19739c0af44bc5469931e34165e348a4d5789270a4819522d39a0bf653b082da"
+    },
+    "environment": {
+      "os": "Windows",
+      "os_release": "11",
+      "architecture": "AMD64",
+      "python": "3.14.6",
+      "implementation": "CPython",
+      "isolated": true,
+      "interpreter_sha256": "03168c01b7b7491423350e82c26fee71f35b43694d1319d3c668bda6903a0c38"
+    },
+    "privacy": "Repository-relative source paths and allowlisted metadata only; no credentials, payloads or environment values."
+  },
+  "method": "Independent baseline checkout + H01 source/tests, npm ci --ignore-scripts, npm run check, npm test."
+}
